@@ -66,7 +66,7 @@
                 <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
                     <h3 class="text-2xl font-bold text-white">Polizei</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
                     <h3 class="text-2xl font-bold text-white">EMS</h3>
                 </div>
                 <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
@@ -128,7 +128,7 @@
     </section>
 
     <footer class="border-t border-zinc-800 py-8 text-center text-gray-500 bg-zinc-950">
-        <p>© 2026 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫𝙚𝙈 • Alle Rechte vorbehalten</p>
+        <p>© 2026 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩y ┃ 𝙁𝙞𝙫𝙚𝙈 • Alle Rechte vorbehalten</p>
     </footer>
 
     <script>
@@ -151,22 +151,19 @@
             });
 
         // FiveM Abfrage über die Server-IP
-        if(FIVEM_SERVER_IP !== "DEINE_SERVER_IP_HIER") {
-            fetch(`https://servers-frontend.fivem.net/api/servers/single/${FIVEM_SERVER_IP}`)
-                .then(response => response.json())
-                .then(data => {
-                    if(data && data.Data && data.Data.clients !== undefined) {
-                        document.getElementById('fivem-count').innerText = `${data.Data.clients}/${data.Data.sv_maxclients}`;
-                    } else {
-                        document.getElementById('fivem-count').innerText = "0";
-                    }
-                })
-                .catch(() => {
-                    document.getElementById('fivem-count').innerText = "Online";
-                });
-        } else {
-            document.getElementById('fivem-count').innerText = "IP fehlt";
-        }
+        fetch(`https://servers-frontend.fivem.net/api/servers/single/${FIVEM_SERVER_IP}`)
+            .then(response => response.json())
+            .then(data => {
+                if(data && data.Data && data.Data.clients !== undefined) {
+                    document.getElementById('fivem-count').innerText = `${data.Data.clients}/${data.Data.sv_maxclients}`;
+                } else {
+                    document.getElementById('fivem-count').innerText = "0";
+                }
+            })
+            .catch(() => {
+                // Fallback, falls der Server offline ist oder die API blockiert
+                document.getElementById('fivem-count').innerText = "Online";
+            });
     </script>
 
 </body>
