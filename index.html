@@ -150,19 +150,33 @@
                 document.getElementById('discord-count').innerText = "Online";
             });
 
-        // FiveM Abfrage über die Server-IP
-        fetch(`https://servers-frontend.fivem.net/api/servers/single/${FIVEM_SERVER_IP}`)
+        // FiveM Live-Abfrage über den FiveM API-Server (Tunnelt die CORS-Sperre)
+        fetch(`https://cors-anywhere.herokuapp.com/https://servers-frontend.fivem.net/api/servers/single/${FIVEM_SERVER_IP}`, {
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        })
             .then(response => response.json())
             .then(data => {
                 if(data && data.Data && data.Data.clients !== undefined) {
+                    // Zeigt "Aktuelle Spieler / Maximale Slots" an (z.B. 2/32)
                     document.getElementById('fivem-count').innerText = `${data.Data.clients}/${data.Data.sv_maxclients}`;
                 } else {
-                    document.getElementById('fivem-count').innerText = "0";
+                    document.getElementById('fivem-count').innerText = "Online";
                 }
             })
             .catch(() => {
-                // Fallback, falls der Server offline ist oder die API blockiert
-                document.getElementById('fivem-count').innerText = "Online";
+                // Zweiter Versuch direkt über die lokale Server-Schnittstelle, falls der Proxy überlastet ist
+                fetch(`https://cors-anywhere.herokuapp.com/http://${FIVEM_SERVER_IP}/players.json`)
+                    .then(res => res.json())
+                    .then(players => {
+                        if(Array.isArray(players)) {
+                            document.getElementById('fivem-count').innerText = players.length;
+                        } else {
+                            document.getElementById('fivem-count').innerText = "Online";
+                        }
+                    })
+                    .catch(() => {
+                        document.getElementById('fivem-count').innerText = "Online";
+                    });
             });
     </script>
 
