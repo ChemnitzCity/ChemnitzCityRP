@@ -95,7 +95,7 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
                 <h3 id="discord-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
-                <p class="text-gray-300 text-xl">Discord User online</p>
+                <p class="text-gray-300 text-xl">Mitglieder insgesamt</p>
             </div>
             <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
                 <h3 id="fivem-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
@@ -110,7 +110,7 @@
 
     <section id="join" class="py-24 px-6 bg-black text-center">
         <h2 class="text-5xl font-bold mb-6 text-blue-400">
-            Werde Teil von 𝘾𝙝𝙚𝙢𝙣𝙞τ𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫ε𝙈
+            Werde Teil von 𝘾𝙝𝙚𝙢𝙣𝙞τ𝙯 𝘾𝙞𝙩ÿ ┃ 𝙁𝙞𝙫ε𝙈
         </h2>
         <p class="text-gray-300 text-xl max-w-3xl mx-auto mb-10">
             Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
@@ -118,7 +118,7 @@
         </p>
 
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="fivem://connect/DEINE-IP" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
+            <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
                 Mit Server Verbinden
             </a>
             <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold">
@@ -133,15 +133,15 @@
 
     <script>
         // --- DEINE SEITEN-EINSTELLUNGEN ---
-        const DISCORD_INVITE_CODE = "HHyd7C7sZe"; // Euer Discord-Einladungs-Code aus dem Link
-        const FIVEM_SERVER_IP = "DEINE_SERVER_IP_HIER"; // z.B. "185.242.112.5:30120"
+        const DISCORD_INVITE_CODE = "HHyd7C7sZe"; // Euer Discord-Link-Code
+        const FIVEM_SERVER_IP = "134.255.209.35:10090"; // Eure Server-IP
 
-        // Discord Abfrage über einen freien API-Spiegel
+        // Discord Abfrage über die Einladungs-API
         fetch(`https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`)
             .then(response => response.json())
             .then(data => {
-                if(data && data.approximate_presence_count !== undefined) {
-                    document.getElementById('discord-count').innerText = data.approximate_presence_count;
+                if(data && data.approximate_member_count !== undefined) {
+                    document.getElementById('discord-count').innerText = data.approximate_member_count;
                 } else {
                     document.getElementById('discord-count').innerText = "Bereit";
                 }
@@ -162,7 +162,6 @@
                     }
                 })
                 .catch(() => {
-                    // Fallback, falls die Haupt-API blockiert
                     document.getElementById('fivem-count').innerText = "Online";
                 });
         } else {
