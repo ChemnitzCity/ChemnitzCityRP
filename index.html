@@ -36,7 +36,7 @@
     <section class="py-24 px-6 bg-zinc-950">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold text-center mb-16 text-blue-400">
-                Warum 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫𝙚𝙈?
+                Warum 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩ÿ ┃ 𝙁𝙞𝙫ε𝙈?
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -61,35 +61,61 @@
             <h2 class="text-5xl font-bold text-center mb-16 text-blue-400">
                 Fraktionen
             </h2>
+            <p class="text-center text-gray-400 -mt-10 mb-12">Klicke auf eine Fraktion, um mehr Details zu erfahren.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Polizei')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Polizei</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('EMS')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">EMS</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('ADAC')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">ADAC</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Gangs')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Gangs</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Mechaniker')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Mechaniker</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Mafia')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Mafia</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Taxi')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Taxi</h3>
                 </div>
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 transition">
+                <div onclick="openFactionModal('Bürger')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-[1.03] transition-all">
                     <h3 class="text-2xl font-bold text-white">Bürger</h3>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="faction-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+        <div class="bg-zinc-900/95 border border-blue-500/40 rounded-3xl p-8 max-w-lg w-full shadow-[0_0_50px_rgba(59,130,246,0.3)] transform transition-all relative">
+            
+            <button onclick="closeFactionModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold transition">
+                &times;
+            </button>
+
+            <h3 id="modal-title" class="text-3xl font-extrabold text-blue-400 mb-4 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                Fraktionsname
+            </h3>
+            
+            <div class="border-t border-zinc-800 my-4"></div>
+            
+            <p id="modal-description" class="text-gray-300 text-lg leading-relaxed mb-6 whitespace-pre-line">
+                Hier steht die Beschreibung der Fraktion.
+            </p>
+
+            <div class="text-right">
+                <button onclick="closeFactionModal()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-2 rounded-xl transition shadow-lg">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
 
     <section class="py-24 px-6 bg-zinc-950">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
@@ -134,21 +160,56 @@
     </footer>
 
     <script>
+        // BESCHREIBUNGEN DER FRAKTIONEN
+        const factionTexts = {
+            "Polizei": "Das Police Department Chemnitz sorgt für Recht und Ordnung.\n\nEgal ob Streifendienst, Großrazzien oder die Verfolgung von Schwerstkriminellen – hier erlebst du strukturiertes und professionelles Staats-RP.",
+            "EMS": "Das Emergency Medical Service Team rettet Leben.\n\nAls Sanitäter oder Notarzt bist du rund um die Uhr im Einsatz, versorgst verletzte Bürger und hilfst nach schweren Unfällen.",
+            "ADAC": "Der Pannendienst für Chemnitz City.\n\nDu schleppst regelwidrig geparkte Fahrzeuge ab, reparierst Autos am Straßenrand und hilfst den Bürgern bei technischen Problemen.",
+            "Gangs": "Das kriminelle Pflaster von Chemnitz.\n\nGründe deine eigene Gang oder schließe dich bestehenden Gruppierungen an. Übernehme Drogengebiete, liefere dir Straßenkämpfe und plane Raubüberfälle.",
+            "Mechaniker": "Tuning und Reparatur auf höchstem Niveau.\n\nIn der Custom-Werkstatt motzt du die Fahrzeuge der Bürger auf, baust Upgrades ein und sorgst dafür, dass die Motoren sauber laufen.",
+            "Mafia": "Das organisierte Verbrechen im Hintergrund.\n\nDie Mafia agiert im Geheimen, kontrolliert den illegalen Waffenmarkt, betreibt Geldwäsche und regelt interne Konflikte mit eiserner Hand.",
+            "Taxi": "Der sicherste Chauffeurdienst der Stadt.\n\nBringe Bürger von Punkt A nach Punkt B, erfahre die neuesten Gerüchte der Stadt und sorge für eine entspannte Fahrt.",
+            "Bürger": "Das Fundament unseres Servers.\n\nGehe legalen Jobs nach, erwirtschafte dein eigenes Geld, kaufe dir Häuser sowie Autos und gestalte dein Leben völlig frei nach deinen Wünschen."
+        };
+
+        // Funktion zum Öffnen des Fensters
+        function openFactionModal(factionName) {
+            const modal = document.getElementById('faction-modal');
+            const title = document.getElementById('modal-title');
+            const description = document.getElementById('modal-description');
+
+            title.innerText = factionName;
+            description.innerText = factionTexts[factionName] || "Keine Beschreibung verfügbar.";
+
+            modal.classList.remove('hidden');
+        }
+
+        // Funktion zum Schließen des Fensters
+        function closeFactionModal() {
+            document.getElementById('faction-modal').classList.add('hidden');
+        }
+
+        // Schließen beim Klick in den leeren Raum
+        window.onclick = function(event) {
+            const modal = document.getElementById('faction-modal');
+            if (event.target == modal) {
+                closeFactionModal();
+            }
+        }
+
+        // DISCORD LIVE ANZEIGE
         const DISCORD_INVITE_CODE = "HHyd7C7sZe";
 
-        // Discord Abfrage über die offizielle Einladungs-API
         fetch(`https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`)
             .then(response => response.json())
             .then(data => {
                 if(data) {
-                    // Setzt die Online-Zahl ein
                     if(data.approximate_presence_count !== undefined) {
                         document.getElementById('discord-online').innerText = data.approximate_presence_count;
                     } else {
                         document.getElementById('discord-online').innerText = "Bereit";
                     }
                     
-                    // Setzt die Gesamt-Mitgliederzahl ein
                     if(data.approximate_member_count !== undefined) {
                         document.getElementById('discord-total').innerText = data.approximate_member_count;
                     } else {
