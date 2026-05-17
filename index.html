@@ -40,11 +40,11 @@
         </div>
     </nav>
 
-    <div id="team-box" class="fixed top-24 right-6 z-[9998] p-5 rounded-2xl bg-zinc-900/90 border border-blue-500/30 backdrop-blur-md shadow-[0_0_25px_rgba(59,130,246,0.3)] w-[260px] transition-opacity duration-300">
+    <div id="team-box" class="fixed top-24 right-6 z-[9998] p-5 rounded-2xl bg-zinc-950/40 border border-blue-500/25 backdrop-blur-xl shadow-[0_0_30px_rgba(59,130,246,0.15)] w-[260px] transition-all duration-300">
         <div class="space-y-4">
             <div class="flex items-center gap-4 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
                 <div class="absolute left-0 top-0 h-full w-[3px] bg-red-600 rounded-full group-hover:w-[4px] group-hover:bg-red-500 transition-all"></div>
-                <div class="w-10 h-10 rounded-lg bg-zinc-800 border border-red-500/40 flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900/60 border border-red-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.2)] bg-clip-padding backdrop-blur-md">
                     <span class="text-red-500 font-black text-sm">P</span>
                 </div>
                 <div>
@@ -54,7 +54,7 @@
             </div>
             <div class="flex items-center gap-4 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
                 <div class="absolute left-0 top-0 h-full w-[3px] bg-red-600 rounded-full group-hover:w-[4px] group-hover:bg-red-500 transition-all"></div>
-                <div class="w-10 h-10 rounded-lg bg-zinc-800 border border-red-500/40 flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900/60 border border-red-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.2)] bg-clip-padding backdrop-blur-md">
                     <span class="text-red-500 font-black text-sm">H</span>
                 </div>
                 <div>
@@ -64,7 +64,7 @@
             </div>
             <div class="flex items-center gap-4 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
                 <div class="absolute left-0 top-0 h-full w-[3px] bg-cyan-500 rounded-full group-hover:w-[4px] transition-all"></div>
-                <div class="w-10 h-10 rounded-lg bg-zinc-800 border border-cyan-500/40 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                <div class="w-10 h-10 rounded-lg bg-zinc-900/60 border border-cyan-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.2)] bg-clip-padding backdrop-blur-md">
                     <span class="text-cyan-400 font-black text-sm">G</span>
                 </div>
                 <div>
@@ -209,21 +209,106 @@
 
     <div id="tab-content-regelwerk" class="tab-content is-hidden">
         <section class="py-24 px-6 bg-black min-h-[75vh]">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Server-Regelwerk</h2>
-                <p class="text-center text-gray-400 mb-12">Bitte halte dich stets an die Regeln, um ein faires Spielklima zu garantieren.</p>
-                <div class="space-y-6">
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§1 Allgemeines Verhalten</h3>
-                        <p class="text-gray-300 leading-relaxed">Respektvoller Umgang miteinander außerhalb des Roleplays ist absolute Pflicht. Beleidigungen, OOC-Hate oder toxisches Verhalten werden nicht geduldet.</p>
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-extrabold text-center mb-4 text-blue-400 tracking-wide drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                    Chemnitz City Roleplay – Regelwerk
+                </h2>
+                <p class="text-center text-gray-300 max-w-3xl mx-auto mb-16 text-lg leading-relaxed border-b border-zinc-800/60 pb-8">
+                    Herzlich willkommen in Chemnitz City! Um ein hochwertiges und faires Spielerlebnis zu garantieren, ist dieses Regelwerk für alle Bürger der Stadt bindend. <span class="text-red-400 font-bold underline">Unwissenheit schützt vor Strafe nicht.</span>
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-blue-400">Allgemeine Verhaltensregeln</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">Respekt & Etikette:</strong> Ein respektvoller Umgangston ist Grundvoraussetzung. Beleidigungen, die über das RP hinausgehen (OOC-Beleidigungen), sind streng untersagt.</li>
+                                <li><strong class="text-white block mb-0.5">Hassrede & Diskriminierung:</strong> Rassismus, Sexismus, Homophobie oder jegliche Form von Diskriminierung führen zu einem <span class="text-red-400 font-semibold underline">sofortigen und permanenten Ausschluss (Permabann)</span>.</li>
+                                <li><strong class="text-white block mb-0.5">Toxizität:</strong> Wer absichtlich die Spielfreude anderer stört oder Unruhe stiftet, wird vom Projekt ausgeschlossen.</li>
+                                <li><strong class="text-white block mb-0.5">Support-Check:</strong> Support-Situationen werden sachlich geführt. Das Diskutieren von Regeln während einer laufenden RP-Situation (RP-Flucht in den Support) ist verboten.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§2 Fail-RP & Power-RP</h3>
-                        <p class="text-gray-300 leading-relaxed">Aktionen, die unrealistisch sind oder dem Gegenüber keinerlei Handlungsspielraum lassen (Power-RP), sind strengstens verboten. Spiele deine Situationen realistisch aus.</p>
+
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-blue-400">Roleplay-Grundlagen</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">Fail-RP:</strong> Dein Handeln muss stets realistisch sein. Das Verlassen der Rolle (Out of Character gehen) im Spiel ist verboten.</li>
+                                <li><strong class="text-white block mb-0.5">Metagaming:</strong> Informationen, die du außerhalb des Spiels (Discord, Streams, Freunde) erhältst, dürfen dein In-Game-Handeln nicht beeinflussen.</li>
+                                <li><strong class="text-white block mb-0.5">Powergaming:</strong> Du musst anderen Spielern eine faire Chance zur Reaktion lassen. Handlungen, die deinem Gegenüber keine Wahl lassen (z.B. "Ich fessle dich, obwohl du 5m weg stehst"), sind verboten.</li>
+                                <li class="p-3 bg-blue-500/5 rounded-xl border border-blue-500/10">
+                                    <strong class="text-blue-300 block mb-0.5">New Life Regel:</strong> Nach dem Tod im Krankenhaus (Medic-Respawn) vergisst dein Charakter alle Geschehnisse der letzten Situation. Du darfst <span class="text-blue-400 font-bold underline">15 Minuten lang</span> nicht an den Ort deines Todes zurückkehren.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§3 RDM & VDM</h3>
-                        <p class="text-gray-300 leading-relaxed">Das wahllose Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund bzw. Call führt zu harten Sanktionen.</p>
+
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-blue-400">Gewalt & Kriminalität</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">RDM & VDM:</strong> Das Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund ist streng untersagt.</li>
+                                <li><strong class="text-white block mb-0.5">Schuss-Call:</strong> Jede Waffengewalt benötigt einen ersichtlichen Grund und einen mündlichen Call. <span class="text-blue-400 font-semibold block mt-1 p-2 bg-blue-500/5 rounded-lg border border-blue-500/10 text-center">Wichtig: Ein Schuss-Call ist nach der letzten Interaktion für 10 Minuten aktiv.</span></li>
+                                <li>
+                                    <strong class="text-white block mb-2">Geiselnahmen:</strong>
+                                    <span class="block text-zinc-400 mb-1.5">• Müssen realistisch und qualitativ hochwertig ausgespielt werden.</span>
+                                    <span class="block text-zinc-400 mb-1.5">• Max. Forderung pro Geisel: <span class="text-emerald-400 font-bold">20.000€</span></span>
+                                    <span class="block text-zinc-400">• Max. Gesamtforderung: <span class="text-emerald-400 font-bold">60.000€</span> (ab 3 Geiseln gedeckelt).</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-blue-400">Fraktionen & Wirtschaft</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">Fraktionskriege:</strong> Kämpfe zwischen Gruppierungen müssen im Vorfeld eine eindeutige RP-Grundlage haben.</li>
+                                <li><strong class="text-white block mb-0.5">Korruption:</strong> Korruption in staatlichen Fraktionen (LSPD, LSMD) ist absolut verboten und nur nach expliziter vorheriger Absprache mit der Projektleitung erlaubt.</li>
+                                <li><strong class="text-white block mb-0.5">Fahrzeug-Missbrauch:</strong> Fahrzeuge sind keine unzerstörbaren Panzer. Das absichtliche Rammen oder Blockieren von Hauptstraßen sowie Spawn-Punkten ist verboten.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-blue-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-blue-400">Technik & Sicherheit</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">Cheating & Hacks:</strong> Die Nutzung von Drittanbietersoftware, Exploits, Cheats oder Mod-Menüs führt zum <span class="text-red-400 font-bold underline">sofortigen permanenten Bann</span>.</li>
+                                <li><strong class="text-white block mb-0.5">Exploiting:</strong> Das Ausnutzen von fehlerhaften Spielmechaniken oder Bugs (z.B. Item-Vervielfältigung) ist strengstens verboten. Bugs müssen umgehend im Support gemeldet werden.</li>
+                                <li><strong class="text-white block mb-0.5">Voice-Chat:</strong> Ein funktionierendes, klares Mikrofon ist Pflicht. Extreme Störgeräusche, Soundboards (ohne RP-Sinn) oder unnatürliche Stimmenverzerrer sind untersagt.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800/80 shadow-2xl hover:border-blue-500/30 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-2 h-6 bg-red-500 rounded-full"></div>
+                                <h3 class="text-2xl font-bold text-red-400">Sanktionskatalog</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                                <li><strong class="text-white block mb-0.5">Mündliche Verwarnung:</strong> Wird vor allem bei Erstvergehen, Unwissenheit oder sehr leichten Fehlern ausgesprochen.</li>
+                                <li><strong class="text-white block mb-0.5">Verwarnung (Warn):</strong> Eine formelle schriftliche Notiz. <span class="text-red-400 font-semibold">Bei 3 aktiven Warns erfolgt ein automatischer temporärer Bann.</span></li>
+                                <li><strong class="text-white block mb-0.5">Temporärer Ausschluss:</strong> Projektausschluss für eine Dauer von <span class="text-zinc-100 font-bold">1 bis 14 Tagen</span> je nach Schwere des begangenen Regelbruchs.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
