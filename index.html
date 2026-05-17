@@ -108,22 +108,22 @@
 
         <section id="join" class="py-24 px-6 bg-zinc-950 text-center">
             <div class="max-w-7xl mx-auto flex items-center justify-center gap-12 flex-col sm:flex-row">
-                <img src="https://i.ibb.co/5YnNnB3/image-3.png" alt="Chemnitz City Logo" class="w-48 rounded-3xl shadow-[0_0_50px_rgba(59,130,246,0.3)]">
+                <img src="myLogo.png" alt="Chemnitz City Logo" class="w-48 h-48 object-cover rounded-3xl shadow-[0_0_50px_rgba(59,130,246,0.4)]">
 
-                <div>
+                <div class="text-center sm:text-left">
                     <h2 class="text-5xl font-bold mb-6 text-blue-400">
                         Werde Teil von Chemnitz City ┃ FiveM
                     </h2>
-                    <p class="text-gray-300 text-xl max-w-3xl mx-auto mb-10">
+                    <p class="text-gray-300 text-xl max-w-3xl mb-10">
                         Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
                         aktiven Fraktionen und spannenden Events.
                     </p>
 
-                    <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
+                    <div class="flex flex-col md:flex-row justify-center sm:justify-start gap-4">
+                        <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl text-center">
                             Mit Server Verbinden
                         </a>
-                        <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold">
+                        <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold text-center">
                             Discord Öffnen
                         </a>
                     </div>
@@ -198,8 +198,45 @@
         </div>
     </div>
 
-    <div id="tab-content-regelwerk" class="tab-content is-hidden p-24 text-center">Regelwerk-Bereich</div>
-    <div id="tab-content-tebex" class="tab-content is-hidden p-24 text-center">Tebex-Shop-Bereich</div>
+    <div id="tab-content-regelwerk" class="tab-content is-hidden">
+        <section class="py-24 px-6 bg-black min-h-[75vh]">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Server-Regelwerk</h2>
+                <p class="text-center text-gray-400 mb-12">Bitte halte dich stets an die Regeln, um ein faires Spielklima zu garantieren.</p>
+                
+                <div class="space-y-6">
+                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3">§1 Allgemeines Verhalten</h3>
+                        <p class="text-gray-300 leading-relaxed">Respektvoller Umgang miteinander außerhalb des Roleplays ist absolute Pflicht. Beleidigungen, OOC-Hate oder toxisches Verhalten werden nicht geduldet.</p>
+                    </div>
+
+                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3">§2 Fail-RP & Power-RP</h3>
+                        <p class="text-gray-300 leading-relaxed">Aktionen, die unrealistisch sind oder dem Gegenüber keinerlei Handlungsspielraum lassen (Power-RP), sind strengstens verboten. Spiele deine Situationen realistisch aus.</p>
+                    </div>
+
+                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3">§3 RDM & VDM</h3>
+                        <p class="text-gray-300 leading-relaxed">Das wahllose Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund bzw. Call führt zu harten Sanktionen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="tab-content-tebex" class="tab-content is-hidden">
+        <section class="py-24 px-6 bg-black min-h-[75vh] flex items-center justify-center">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-6 text-blue-400">Chemnitz City Store</h2>
+                <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-10">
+                    Du möchtest unser Projekt unterstützen und dir exklusive Ingame-Vorteile wie Custom-Fahrzeuge, VIP-Status oder kosmetische Items sichern? Besuche unseren offiziellen Tebex-Shop!
+                </p>
+                <a href="https://tebex.io" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold px-10 py-5 rounded-2xl text-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:scale-105 transition-all">
+                    Zum Webshop
+                </a>
+            </div>
+        </section>
+    </div>
 
     <footer class="border-t border-zinc-800 py-8 text-center text-gray-500 bg-zinc-950">
         <p>© 2026 Chemnitz City ┃ FiveM • Alle Rechte vorbehalten</p>
@@ -264,7 +301,6 @@
         const DISCORD_INVITE_CODE = "HHyd7C7sZe";
         const baseDiscordUrl = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`;
         
-        // Liste von vertrauenswürdigen CORS-Proxies
         const proxies = [
             `https://cors-anywhere.azm.workers.dev/?url=${encodeURIComponent(baseDiscordUrl)}`,
             `https://api.allorigins.win/get?url=${encodeURIComponent(baseDiscordUrl)}`
@@ -284,8 +320,6 @@
                 })
                 .then(data => {
                     let jsonData;
-                    
-                    // AllOrigins verpackt die Antwort in ein "contents"-Feld, andere Proxies senden es direkt
                     if (data && data.contents) {
                         jsonData = JSON.parse(data.contents);
                     } else {
@@ -323,7 +357,6 @@
             document.getElementById('discord-total').innerText = "-";
         }
 
-        // API Abfrage beim Laden der Seite starten
         tryFetchDiscordData(0);
     </script>
 </body>
