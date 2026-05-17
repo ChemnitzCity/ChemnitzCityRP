@@ -6,24 +6,30 @@
     <title>Chemnitz City ┃ FiveM</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Erlaubt sanftes Scrollen, wenn man auf die Reiter klickt */
+        /* Sanftes Scrollen aktivieren */
         html {
             scroll-behavior: smooth;
         }
+        /* Custom Fallback, falls das v4-Alpha-Blending im Browser zickt */
+        .custom-nav {
+            background-color: rgba(10, 10, 10, 0.9) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
     </style>
 </head>
-<body class="min-h-screen bg-black text-white font-sans overflow-x-hidden pt-20">
+<body class="min-h-screen bg-black text-white font-sans overflow-x-hidden pt-24">
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-900 px-6 py-4">
+    <nav class="custom-nav fixed top-0 left-0 right-0 w-full z-[9999] border-b border-zinc-900/80 px-6 py-4 block">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <a href="#" class="text-xl font-black tracking-wider text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
                 Chemnitz City
             </a>
-            <div class="flex items-center gap-1 sm:gap-4 text-sm sm:text-base font-bold text-gray-400">
-                <a href="#" class="hover:text-blue-400 transition px-3 py-2">Home</a>
-                <a href="#fraktionen" class="hover:text-blue-400 transition px-3 py-2 border-b-2 border-transparent hover:border-blue-400">Fraktionen</a>
-                <a href="#regelwerk" class="hover:text-blue-400 transition px-3 py-2 border-b-2 border-transparent hover:border-blue-400">Regelwerk</a>
-                <a href="#tebex" class="hover:text-blue-400 transition px-3 py-2 border-b-2 border-transparent hover:border-blue-400">Tebex</a>
+            <div class="flex items-center gap-2 sm:gap-6 text-sm sm:text-base font-bold text-gray-300">
+                <a href="#" class="hover:text-blue-400 transition-colors px-3 py-1.5 rounded-lg bg-zinc-900/50">Home</a>
+                <a href="#fraktionen" class="hover:text-blue-400 transition-colors px-3 py-1.5 rounded-lg hover:bg-zinc-900/30">Fraktionen</a>
+                <a href="#regelwerk" class="hover:text-blue-400 transition-colors px-3 py-1.5 rounded-lg hover:bg-zinc-900/30">Regelwerk</a>
+                <a href="#tebex" class="hover:text-blue-400 transition-colors px-3 py-1.5 rounded-lg hover:bg-zinc-900/30">Tebex</a>
             </div>
         </div>
     </nav>
@@ -66,7 +72,7 @@
                 </div>
                 <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
                     <h3 class="text-2xl font-bold mb-4 text-blue-300">Eigene Fraktionen</h3>
-                    <p class="text-gray-300 leading-relaxed">Polizei, EMS, ADAC, Gangs und viele weitere Fraktionen warten auf dich.</p>
+                    <p class="text-gray-300 leading-relaxed">Polizei, EMS, ADAC, Gangs und many weitere Fraktionen warten auf dich.</p>
                 </div>
                 <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
                     <h3 class="text-2xl font-bold mb-4 text-blue-300">Custom Scripts</h3>
@@ -76,7 +82,7 @@
         </div>
     </section>
 
-    <section id="fraktionen" class="py-24 px-6 bg-black scroll-mt-24">
+    <section id="fraktionen" class="py-24 px-6 bg-black scroll-mt-28">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">
                 Unsere Fraktionen
@@ -112,157 +118,11 @@
         </div>
     </section>
 
-    <div id="faction-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+    <div id="faction-modal" class="fixed inset-0 z-[10000] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
         <div class="bg-zinc-900/95 border border-blue-500/30 rounded-3xl p-8 max-w-lg w-full shadow-[0_0_50px_rgba(59,130,246,0.25)] transform transition-all relative">
             <button onclick="closeFactionModal()" class="absolute top-4 right-5 text-gray-400 hover:text-white text-3xl font-light transition">&times;</button>
             <h3 id="modal-title" class="text-3xl font-extrabold text-blue-400 mb-2 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">Fraktionsname</h3>
             <div class="border-t border-zinc-800 my-4"></div>
             <p id="modal-description" class="text-gray-300 text-base leading-relaxed mb-6 whitespace-pre-line">Hier stehen die Infos.</p>
             <div class="text-right">
-                <button onclick="closeFactionModal()" class="bg-blue-500/90 hover:bg-blue-600 text-white font-bold px-6 py-2.5 rounded-xl transition shadow-[0_0_15px_rgba(59,130,246,0.3)]">Schließen</button>
-            </div>
-        </div>
-    </div>
-
-    <section id="regelwerk" class="py-24 px-6 bg-zinc-950 scroll-mt-24">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-6 text-blue-400">Server-Regelwerk</h2>
-            <p class="text-center text-gray-400 mb-12">Bitte halte dich stets an die Regeln, um ein faires Spielklima zu garantieren.</p>
-            
-            <div class="space-y-6">
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h3 class="text-xl font-bold text-blue-300 mb-2">§1 Allgemeines Verhalten</h3>
-                    <p class="text-gray-400 leading-relaxed">Respektvoller Umgang miteinander außerhalb des Roleplays ist absolute Pflicht. Beleidigungen, OOC-Hate oder toxisches Verhalten werden nicht geduldet.</p>
-                </div>
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h3 class="text-xl font-bold text-blue-300 mb-2">§2 Fail-RP & Power-RP</h3>
-                    <p class="text-gray-400 leading-relaxed">Aktionen, die unrealistisch sind oder dem Gegenüber keinerlei Handlungsspielraum lassen (Power-RP), sind strengstens verboten. Spiele deine Situationen realistisch aus.</p>
-                </div>
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h3 class="text-xl font-bold text-blue-300 mb-2">§3 RDM & VDM</h3>
-                    <p class="text-gray-400 leading-relaxed">Das wahllose Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund bzw. Call führt zu harten Sanktionen.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tebex" class="py-24 px-6 bg-black scroll-mt-24">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-bold mb-6 text-blue-400">Chemnitz City Tebex Store</h2>
-            <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-10">
-                Du möchtest unser Projekt unterstützen und dir exklusive Ingame-Vorteile wie Custom-Fahrzeuge, VIP-Status oder kosmetische Items sichern? Besuche unseren offiziellen Tebex-Shop!
-            </p>
-            <a href="https://tebex.io" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold px-10 py-5 rounded-2xl text-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:scale-105 transition-all">
-                Zum Webshop (.Tebex.io)
-            </a>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-zinc-950">
-        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-            
-            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
-                <h3 id="discord-online" class="text-5xl font-bold text-blue-400 mb-2">Laden...</h3>
-                <p class="text-gray-300 text-xl mb-4 font-semibold">Mitglieder online</p>
-                <div class="text-sm text-gray-500 border-t border-zinc-800 pt-3 w-full">
-                    Insgesamt: <span id="discord-total" class="text-blue-400 font-bold">Laden...</span> Mitglieder
-                </div>
-            </div>
-
-            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
-                <h3 class="text-5xl font-bold text-blue-400 mb-4">50+</h3>
-                <p class="text-gray-300 text-xl">Custom Fahrzeuge</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="join" class="py-24 px-6 bg-black text-center">
-        <h2 class="text-5xl font-bold mb-6 text-blue-400">
-            Werte Teil von Chemnitz City ┃ FiveM
-        </h2>
-        <p class="text-gray-300 text-xl max-w-3xl mx-auto mb-10">
-            Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
-            aktiven Fraktionen und spannenden Events.
-        </p>
-
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
-                Mit Server Verbinden
-            </a>
-            <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold">
-                Discord Öffnen
-            </a>
-        </div>
-    </section>
-
-    <footer class="border-t border-zinc-800 py-8 text-center text-gray-500 bg-zinc-950">
-        <p>© 2026 Chemnitz City ┃ FiveM • Alle Rechte vorbehalten</p>
-    </footer>
-
-    <script>
-        // Info-Texte für die jeweiligen Fraktionen
-        const factionTexts = {
-            "Polizei": "Das Police Department Chemnitz sorgt für Sicherheit, Recht und Ordnung auf den Straßen.\n\nEgal ob routinemäßige Verkehrskontrollen, die Absicherung von Kriminalitäts-Hotspots oder hochkomplexe Ermittlungsverfahren – hier erwartet dich wissenschaftlich strukturiertes und professionelles Staats-RP mit Aufstiegschancen.",
-            "EMS": "Das Emergency Medical Service (EMS) Team ist die medizinische Lebensader von Chemnitz City.\n\nAls Sanitäter oder Notarzt bist du rund um die Uhr zur Stelle, um verletzte Bürger zu versorgen, Erste Hilfe zu leisten und nach schweren Verkehrsunfällen oder Schießereien Leben zu retten.",
-            "ADAC": "Der offizielle Pannen- und Abschleppdienst der Stadt.\n\nDu unterstützt die Bürger bei technischen Defekten, reparierst Fahrzeuge direkt vor Ort, entfernst verkehrswidrig abgestellte Autos im Auftrag der Polizei und hältst den Verkehrsfluss sauber aufrecht.",
-            "Gangs": "Das raue Pflaster und die Unterwelt von Chemnitz.\n\nGründe deine eigene Straßengang oder schließe dich einer bestehenden Crew an. Kämpfe um die Vorherrschaft in den Vierteln, sichere dir Routen im illegalen Handel und plane actionreiche Überfälle.",
-            "Mechaniker": "Das Herz der Tuning-Szene in Chemnitz City.\n\nIn den modernen Werkstätten motzt du die Triebwerke der Bürger auf, installierst optische Custom-Upgrades, führst regelmäßige Inspektionen durch und sorgst dafür, dass jeder Motor perfekt abgestimmt ist.",
-            "Mafia": "Das organisierte Verbrechen, das die Fäden im Geheimen zieht.\n\nWeit weg vom Chaos der Straße agiert die Mafia mit eiserner Disziplin. Sie kontrolliert verdeckte Märkte, betreibt strategische Geldwäsche und klärt diplomatische oder bewaffnete Konflikte im Verborgenen.",
-            "Taxi": "Der verlässliche Transport- und Chauffeurservice für alle Lebenslagen.\n\nBringe deine Fahrgäste sicher, schnell und komfortabel an ihr Ziel. Nebenbei bist du der beste Zuhörer der Stadt und erfährst als Erster die heißesten Gerüchte direkt von der Rückbank.",
-            "Bürger": "Das lebendige Fundament unseres gesamten Servers.\n\nBaue dir dein Leben von Grund auf auf. Gehe klassischen, legalen Berufen nach, erwirtschafte dein Vermögen, investiere in exklusive Immobilien sowie Fahrzeuge und gestalte dein RP-Schicksal völlig frei."
-        };
-
-        // Funktion: Pop-up öffnen
-        function openFactionModal(factionName) {
-            const modal = document.getElementById('faction-modal');
-            const title = document.getElementById('modal-title');
-            const description = document.getElementById('modal-description');
-
-            title.innerText = factionName;
-            description.innerText = factionTexts[factionName] || "Es sind aktuell keine Informationen für diese Fraktion hinterlegt.";
-
-            modal.classList.remove('hidden');
-        }
-
-        // Funktion: Pop-up schließen
-        function closeFactionModal() {
-            document.getElementById('faction-modal').classList.add('hidden');
-        }
-
-        // Schließen, wenn man außerhalb des Fensters hinklickt
-        window.onclick = function(event) {
-            const modal = document.getElementById('faction-modal');
-            if (event.target == modal) {
-                closeFactionModal();
-            }
-        }
-
-        // Discord Live-API Abfrage
-        const DISCORD_INVITE_CODE = "HHyd7C7sZe";
-
-        fetch(`https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`)
-            .then(response => response.json())
-            .then(data => {
-                if(data) {
-                    if(data.approximate_presence_count !== undefined) {
-                        document.getElementById('discord-online').innerText = data.approximate_presence_count;
-                    } else {
-                        document.getElementById('discord-online').innerText = "Online";
-                    }
-                    
-                    if(data.approximate_member_count !== undefined) {
-                        document.getElementById('discord-total').innerText = data.approximate_member_count;
-                    } else {
-                        document.getElementById('discord-total').innerText = "-";
-                    }
-                }
-            })
-            .catch(() => {
-                document.getElementById('discord-online').innerText = "Online";
-                document.getElementById('discord-total').innerText = "-";
-            });
-    </script>
-
-</body>
-</html>
+                <button onclick="closeFactionModal()" class="bg-blue-500/90 hover:bg-blue-600 text-white font-bold px-6 py-2.5 rounded-xl transition shadow-[0_0_15px_rgba(59,130,246,0.3)]">Schließen
