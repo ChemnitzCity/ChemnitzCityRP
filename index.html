@@ -6,11 +6,9 @@
     <title>Chemnitz City ┃ FiveM</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Sanftes Scrollen aktivieren */
         html {
             scroll-behavior: smooth;
         }
-        /* Custom Fallback für die fixierte Navigationsleiste */
         .custom-nav {
             background-color: rgba(10, 10, 10, 0.95) !important;
             backdrop-filter: blur(12px);
@@ -40,11 +38,9 @@
                 <h1 class="text-6xl md:text-8xl font-extrabold tracking-wider mb-6 text-blue-400 drop-shadow-[0_0_25px_rgba(59,130,246,0.9)]">
                     Chemnitz City ┃ FiveM
                 </h1>
-
                 <p class="text-xl md:text-2xl text-gray-200 mb-8">
                     Deutscher FiveM Roleplay Server • Realistisches RP • Wirtschaft • Events
                 </p>
-
                 <div class="flex flex-col md:flex-row gap-4 justify-center">
                     <a href="#join" class="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
                         Jetzt Spielen
@@ -62,7 +58,6 @@
                 <h2 class="text-5xl font-bold text-center mb-16 text-blue-400">
                     Warum Chemnitz City ┃ FiveM?
                 </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
                         <h3 class="text-2xl font-bold mb-4 text-blue-300">Realistisches Roleplay</h3>
@@ -82,7 +77,6 @@
 
         <section class="py-24 px-6 bg-black">
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                
                 <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
                     <h3 id="discord-online" class="text-5xl font-bold text-blue-400 mb-2">Laden...</h3>
                     <p class="text-gray-300 text-xl mb-4 font-semibold">Mitglieder online</p>
@@ -90,12 +84,10 @@
                         Insgesamt: <span id="discord-total" class="text-blue-400 font-bold">Laden...</span> Mitglieder
                     </div>
                 </div>
-
                 <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
                     <h3 class="text-5xl font-bold text-blue-400 mb-4">50+</h3>
                     <p class="text-gray-300 text-xl">Custom Fahrzeuge</p>
                 </div>
-
             </div>
         </section>
     </div>
@@ -103,9 +95,7 @@
     <div id="tab-content-fraktionen" class="tab-content hidden">
         <section class="py-24 px-6 bg-black min-h-[75vh]">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">
-                    Unsere Fraktionen
-                </h2>
+                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Unsere Fraktionen</h2>
                 <p class="text-center text-gray-400 mb-12">Klicke auf eine Fraktion, um mehr Informationen zu erhalten.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -153,21 +143,72 @@
     <div id="tab-content-regelwerk" class="tab-content hidden">
         <section class="py-24 px-6 bg-black min-h-[75vh]">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-6 text-blue-400">Server-Regelwerk</h2>
-                <p class="text-center text-gray-400 mb-12">Bitte halte dich stets an die Regeln, um ein faires Spielklima zu garantieren.</p>
+                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Server-Regelwerk</h2>
+                <p class="text-center text-gray-300 text-lg max-w-2xl mx-auto mb-12">
+                    Herzlich willkommen in Chemnitz City! Um ein hochwertiges und faires Spielerlebnis zu garantieren, ist dieses Regelwerk für alle Bürger der Stadt bindend. Unwissenheit schützt vor Strafe nicht.
+                </p>
                 
                 <div class="space-y-6">
-                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                        <h3 class="text-xl font-bold text-blue-300 mb-2">§1 Allgemeines Verhalten</h3>
-                        <p class="text-gray-400 leading-relaxed">Respektvoller Umgang miteinander außerhalb des Roleplays ist absolute Pflicht. Beleidigungen, OOC-Hate oder toxisches Verhalten werden nicht geduldet.</p>
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-blue-300 mb-3">Allgemeine Verhaltensregeln</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">Respekt & Etikette:</strong> Ein respektvoller Umgangston ist Grundvoraussetzung. Beleidigungen, die über das RP hinausgehen (OOC-Beleidigungen), sind streng untersagt.</li>
+                            <li><strong class="text-zinc-200">Hassrede & Diskriminierung:</strong> Rassismus, Sexismus, Homophobie oder jegliche Form von Diskriminierung führen zu einem sofortigen und permanenten Ausschluss (Permabann).</li>
+                            <li><strong class="text-zinc-200">Toxizität:</strong> Wer absichtlich die Spielfreude anderer stört oder Unruhe stiftet, wird vom Projekt ausgeschlossen.</li>
+                            <li><strong class="text-zinc-200">Support-Check:</strong> Support-Situationen werden sachlich geführt. Das Diskutieren von Regeln während einer laufenden RP-Situation (RP-Flucht in den Support) ist verboten.</li>
+                        </ul>
                     </div>
-                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                        <h3 class="text-xl font-bold text-blue-300 mb-2">§2 Fail-RP & Power-RP</h3>
-                        <p class="text-gray-400 leading-relaxed">Aktionen, die unrealistisch sind oder dem Gegenüber keinerlei Handlungsspielraum lassen (Power-RP), sind strengstens verboten. Spiele deine Situationen realistisch aus.</p>
+
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-blue-300 mb-3">Roleplay-Grundlagen</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">Fail-RP:</strong> Dein Handeln muss stets realistisch sein. Das Verlassen der Rolle (Out of Character gehen) im Spiel ist verboten.</li>
+                            <li><strong class="text-zinc-200">Metagaming:</strong> Informationen, die du außerhalb des Spiels (Discord, Streams, Freunde) erhältst, dürfen dein In-Game-Handeln nicht beeinflussen.</li>
+                            <li><strong class="text-zinc-200">Powergaming:</strong> Du musst anderen Spielern eine faire Chance zur Reaktion lassen. Handlungen, die deinem Gegenüber keine Wahl lassen (z.B. "Ich fessle dich, obwohl du 5m weg stehst"), sind verboten.</li>
+                            <li><strong class="text-zinc-200">New Life Regel:</strong> Nach dem Tod im Krankenhaus (Medic-Respawn) vergisst dein Charakter alle Geschehnisse der letzten Situation. Du darfst 15 Minuten lang nicht an den Ort deines Todes zurückkehren.</li>
+                        </ul>
                     </div>
-                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                        <h3 class="text-xl font-bold text-blue-300 mb-2">§3 RDM & VDM</h3>
-                        <p class="text-gray-400 leading-relaxed">Das wahllose Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund bzw. Call führt zu harten Sanktionen.</p>
+
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-blue-300 mb-3">Gewalt & Kriminalität</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">RDM & VDM:</strong> Das Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund ist streng untersagt.</li>
+                            <li><strong class="text-zinc-200">Schuss-Call:</strong> Jede Waffengewalt benötigt einen ersichtlichen Grund und einen mündlichen Call. <span class="text-blue-400 font-semibold">Wichtig:</span> Ein Schuss-Call ist nach der letzten Interaktion für 10 Minuten aktiv.</li>
+                            <li>
+                                <strong class="text-zinc-200">Geiselnahmen:</strong> Müssen realistisch und qualitativ hochwertig ausgespielt werden.
+                                <div class="mt-2 bg-black/40 p-3 rounded-xl border border-zinc-800 text-sm text-zinc-300 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    <div>• Max. Forderung pro Geisel: <span class="text-blue-400 font-bold">20.000€</span></div>
+                                    <div>• Max. Gesamtforderung: <span class="text-blue-400 font-bold">60.000€</span> (ab 3 Geiseln gedeckelt)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-blue-300 mb-3">Fraktionen & Wirtschaft</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">Fraktionskriege:</strong> Kämpfe zwischen Gruppierungen müssen im Vorfeld eine RP-Grundlage haben.</li>
+                            <li><strong class="text-zinc-200">Korruption:</strong> Korruption in staatlichen Fraktionen (LSPD, LSMD) ist nur nach vorheriger Absprache mit der Projektleitung erlaubt.</li>
+                            <li><strong class="text-zinc-200">Fahrzeug-Missbrauch:</strong> Fahrzeuge sind keine unzerstörbaren Panzer. Das absichtliche Blockieren von Hauptstraßen oder Spawn-Punkten ist verboten.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-blue-300 mb-3">Technik & Sicherheit</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">Cheating & Hacks:</strong> Die Nutzung von Drittanbietersoftware oder Mod-Menüs führt zum sofortigen permanenten Bann.</li>
+                            <li><strong class="text-zinc-200">Exploiting:</strong> Das Ausnutzen von Spielmechaniken oder Bugs (z.B. Item-Vervielfältigung) ist verboten. Bugs müssen umgehend im Support gemeldet werden.</li>
+                            <li><strong class="text-zinc-200">Voice-Chat:</strong> Ein funktionierendes Mikrofon ist Pflicht. Störgeräusche, Soundboards (ohne RP-Sinn) oder Stimmenverzerrer sind untersagt.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 border-l-4 border-l-red-500/60 hover:border-blue-500/40 transition">
+                        <h3 class="text-xl font-bold text-red-400 mb-3">Sanktionskatalog</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2 leading-relaxed">
+                            <li><strong class="text-zinc-200">Mündliche Verwarnung:</strong> Bei Erstvergehen oder leichten Fehlern.</li>
+                            <li><strong class="text-zinc-200">Verwarnung (Warn):</strong> Schriftliche Notiz. Bei 3 Warns erfolgt ein temporärer Bann.</li>
+                            <li><strong class="text-zinc-200">Temporärer Ausschluss:</strong> 1 bis 14 Tage je nach Schwere.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -196,7 +237,6 @@
             Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
             aktiven Fraktionen und spannenden Events.
         </p>
-
         <div class="flex flex-col md:flex-row justify-center gap-4">
             <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
                 Mit Server Verbinden
@@ -212,7 +252,6 @@
     </footer>
 
     <script>
-        // REITER-DYNAMIK LOGIK
         function showTab(tabName) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.add('hidden'));
@@ -234,14 +273,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Info-Texte für die jeweiligen Fraktionen
         const factionTexts = {
             "Polizei": "Das Police Department Chemnitz sorgt für Sicherheit, Recht und Ordnung auf den Straßen.\n\nEgal ob routinemäßige Verkehrskontrollen, die Absicherung von Kriminalitäts-Hotspots oder hochkomplexe Ermittlungsverfahren – hier erwartet dich wissenschaftlich strukturiertes und professionelles Staats-RP mit Aufstiegschancen.",
             "EMS": "Das Emergency Medical Service (EMS) Team ist die medizinische Lebensader von Chemnitz City.\n\nAls Sanitäter oder Notarzt bist du rund um die Uhr zur Stelle, um verletzte Bürger zu versorgen, Erste Hilfe zu leisten und nach schweren Verkehrsunfällen oder Schießereien Leben zu retten.",
             "ADAC": "Der offizielle Pannen- und Abschleppdienst der Stadt.\n\nDu unterstützt die Bürger bei technischen Defekten, reparierst Fahrzeuge direkt vor Ort, entfernst verkehrswidrig abgestellte Autos im Auftrag der Polizei und hältst den Verkehrsfluss sauber aufrecht.",
             "Gangs": "Das raue Pflaster und die Unterwelt von Chemnitz.\n\nGründe deine eigene Straßengang oder schließe dich einer bestehenden Crew an. Kämpfe um die Vorherrschaft in den Vierteln, sichere dir Routen im illegalen Handel und plane actionreiche Überfälle.",
             "Mechaniker": "Das Herz der Tuning-Szene in Chemnitz City.\n\nIn den modernen Werkstätten motzt du die Triebwerke der Bürger auf, installierst optische Custom-Upgrades, führst regelmäßige Inspektionen durch und sorgst dafür, dass jeder Motor perfekt abgestimmt ist.",
-            "Mafia": "Das organisierte Verbrechen, das die Fäden im Geheimen zieht.\n\nWeit weg vom Chaos der Straße agiert die Mafia mit eiserner Disziplin. Sie kontrolliert verdeckte Märkte, betreibt strategische Geldwäsche und klärt diplomatische oder bewaffnete Konflikte im Verborgenen.",
+            "Mafia": "Das organisierte Verbrechen, das die Fäden im Geheimen zieht.\n\nWeit weg vom Chaos der Straße agiert die Mafia mit eiserner Disziplin. Sie kontrolliert verdeckte Märkte, betreibt strategic Geldwäsche und klärt diplomatische oder bewaffnete Konflikte im Verborgenen.",
             "Taxi": "Der verlässliche Transport- und Chauffeurservice für alle Lebenslagen.\n\nBringe deine Fahrgäste sicher, schnell und komfortabel an ihr Ziel. Nebenbei bist du der beste Zuhörer der Stadt und erfährst als Erster die heißesten Gerüchte direkt von der Rückbank.",
             "Bürger": "Das lebendige Fundament unseres gesamten Servers.\n\nBaue dir dein Leben von Grund auf auf. Gehe klassischen, legalen Berufen nach, erwirtschafte dein Vermögen, investiere in exklusive Immobilien sowie Fahrzeuge und gestalte dein RP-Schicksal völlig frei."
         };
@@ -268,7 +306,7 @@
             }
         }
 
-        // GEFIXXTE DISCORD-ABFRAGE MIT PROXY-BYPASS
+        // DISCORD STATS LOGIK (MIT ALLORIGINS PROXY BYPASS)
         const DISCORD_INVITE_CODE = "HHyd7C7sZe";
         const targetUrl = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`;
 
@@ -278,16 +316,13 @@
                 throw new Error('Netzwerk-Fehler beim Proxy');
             })
             .then(data => {
-                // allorigins gibt die Antwort als String in "contents" zurück
                 const discordData = JSON.parse(data.contents);
-                
                 if (discordData) {
                     if (discordData.approximate_presence_count !== undefined) {
                         document.getElementById('discord-online').innerText = discordData.approximate_presence_count;
                     } else {
                         document.getElementById('discord-online').innerText = "Online";
                     }
-                    
                     if (discordData.approximate_member_count !== undefined) {
                         document.getElementById('discord-total').innerText = discordData.approximate_member_count;
                     } else {
@@ -301,6 +336,5 @@
                 document.getElementById('discord-total').innerText = "-";
             });
     </script>
-
 </body>
 </html>
