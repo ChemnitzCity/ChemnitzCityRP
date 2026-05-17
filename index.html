@@ -94,12 +94,12 @@
     <section class="py-24 px-6 bg-zinc-950">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-                <h3 class="text-5xl font-bold text-blue-400 mb-4">500+</h3>
-                <p class="text-gray-300 text-xl">Registrierte Spieler</p>
+                <h3 id="discord-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
+                <p class="text-gray-300 text-xl">Discord User online</p>
             </div>
             <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-                <h3 class="text-5xl font-bold text-blue-400 mb-4">24/7</h3>
-                <p class="text-gray-300 text-xl">Server Online</p>
+                <h3 id="fivem-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
+                <p class="text-gray-300 text-xl">Spieler auf dem Server</p>
             </div>
             <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
                 <h3 class="text-5xl font-bold text-blue-400 mb-4">50+</h3>
@@ -110,7 +110,7 @@
 
     <section id="join" class="py-24 px-6 bg-black text-center">
         <h2 class="text-5xl font-bold mb-6 text-blue-400">
-            Werde Teil von 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫𝙚𝙈
+            Werde Teil von 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫ε𝙈
         </h2>
         <p class="text-gray-300 text-xl max-w-3xl mx-auto mb-10">
             Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
@@ -130,6 +130,48 @@
     <footer class="border-t border-zinc-800 py-8 text-center text-gray-500 bg-zinc-950">
         <p>© 2026 𝘾𝙝𝙚𝙢𝙣𝙞𝙩𝙯 𝘾𝙞𝙩𝙮 ┃ 𝙁𝙞𝙫𝙚𝙈 • Alle Rechte vorbehalten</p>
     </footer>
+
+    <script>
+        // --- EINSTELLUNGEN ---
+        const DISCORD_SERVER_ID = "1468988722245537906"; // Deine eingetragene Discord-ID
+        const FIVEM_SERVER_ID = "DEINE_FIVEM_ID"; // Trag hier deine FiveM Server-ID ein (z.B. j4q9xx)
+
+        // Discord API abfragen
+        if(DISCORD_SERVER_ID !== "DEINE_DISCORD_SERVER_ID") {
+            fetch(`https://discord.com/api/guilds/${DISCORD_SERVER_ID}/widget.json`)
+                .then(response => response.json())
+                .then(data => {
+                    if(data && data.presence_count !== undefined) {
+                        document.getElementById('discord-count').innerText = data.presence_count;
+                    } else {
+                        document.getElementById('discord-count').innerText = "Offline";
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('discord-count').innerText = "Fehler";
+                });
+        } else {
+            document.getElementById('discord-count').innerText = "ID fehlt";
+        }
+
+        // FiveM API abfragen
+        if(FIVEM_SERVER_ID !== "DEINE_FIVEM_ID") {
+            fetch(`https://servers-api.fivem.net/v1/servers/id/${FIVEM_SERVER_ID}`)
+                .then(response => response.json())
+                .then(data => {
+                    if(data && data.Data && data.Data.clients !== undefined) {
+                        document.getElementById('fivem-count').innerText = `${data.Data.clients}/${data.Data.sv_maxclients}`;
+                    } else {
+                        document.getElementById('fivem-count').innerText = "Offline";
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('fivem-count').innerText = "0";
+                });
+        } else {
+            document.getElementById('fivem-count').innerText = "Laden...";
+        }
+    </script>
 
 </body>
 </html>
