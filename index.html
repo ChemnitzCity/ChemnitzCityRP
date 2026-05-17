@@ -28,13 +28,44 @@
 <body class="min-h-screen bg-black text-white font-sans overflow-x-hidden pt-24">
 
     <nav class="custom-nav fixed top-0 left-0 right-0 w-full z-[9999] border-b border-zinc-900/80 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-center">
+        <div class="max-w-7xl mx-auto flex justify-center relative">
+            
             <div class="flex items-center gap-2 sm:gap-6 text-sm sm:text-base font-bold text-gray-300">
-                <button onclick="showTab('home')" id="nav-home" class="tab-btn text-blue-400 transition-colors px-4 py-1.5 rounded-lg bg-zinc-900/80 cursor-pointer">Home</button>
-                <button onclick="showTab('fraktionen')" id="nav-fraktionen" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer">Fraktionen</button>
-                <button onclick="showTab('regelwerk')" id="nav-regelwerk" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer">Regelwerk</button>
-                <button onclick="showTab('tebex')" id="nav-tebex" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer">Tebex</button>
+                <button onclick="showTab('home')" id="nav-home" class="tab-btn text-blue-400 transition-colors px-4 py-1.5 rounded-lg bg-zinc-900/80 cursor-pointer hover:scale-105">Home</button>
+                <button onclick="showTab('fraktionen')" id="nav-fraktionen" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer hover:scale-105">Fraktionen</button>
+                <button onclick="showTab('regelwerk')" id="nav-regelwerk" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer hover:scale-105">Regelwerk</button>
+                <button onclick="showTab('tebex')" id="nav-tebex" class="tab-btn hover:text-blue-400 transition-colors px-4 py-1.5 rounded-lg hover:bg-zinc-900/50 cursor-pointer hover:scale-105">Tebex</button>
             </div>
+
+            <div class="absolute top-[100%] right-0 mt-4 p-5 rounded-2xl bg-zinc-900/90 border border-blue-500/30 backdrop-blur-md shadow-[0_0_25px_rgba(59,130,246,0.3)] w-[260px]">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
+                        <div class="absolute left-0 top-0 h-full w-[3px] bg-red-600 rounded-full group-hover:w-[4px] group-hover:bg-red-500 transition-all"></div>
+                        <img src="https://i.ibb.co/qj5VwYF/cc-red.png" alt="CC Red Logo" class="w-10 rounded-lg shadow-[0_0_15px_rgba(239,68,68,0.4)]">
+                        <div>
+                            <p class="font-extrabold text-blue-400 text-sm tracking-wide">Paul</p>
+                            <p class="text-[10px] uppercase font-black text-blue-400/70 tracking-[2px]">Projektinhaber</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
+                        <div class="absolute left-0 top-0 h-full w-[3px] bg-red-600 rounded-full group-hover:w-[4px] group-hover:bg-red-500 transition-all"></div>
+                        <img src="https://i.ibb.co/qj5VwYF/cc-red.png" alt="CC Red Logo" class="w-10 rounded-lg shadow-[0_0_15px_rgba(239,68,68,0.4)]">
+                        <div>
+                            <p class="font-extrabold text-blue-400 text-sm tracking-wide">Harry</p>
+                            <p class="text-[10px] uppercase font-black text-blue-400/70 tracking-[2px]">Projektleitung</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 relative p-2 rounded-xl group hover:bg-blue-500/10 transition-colors">
+                        <div class="absolute left-0 top-0 h-full w-[3px] bg-cyan-500 rounded-full group-hover:w-[4px] transition-all"></div>
+                        <img src="https://i.ibb.co/kHqC0rD/cc-cyan.png" alt="CC Cyan Logo" class="w-10 rounded-lg shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                        <div>
+                            <p class="font-extrabold text-blue-400 text-sm tracking-wide">Gino</p>
+                            <p class="text-[10px] uppercase font-black text-blue-400/70 tracking-[2px]">Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </nav>
 
@@ -47,17 +78,15 @@
                 <h1 class="text-6xl md:text-8xl font-extrabold tracking-wider mb-6 text-blue-400">
                     Chemnitz City ┃ FiveM
                 </h1>
-
                 <p class="text-xl md:text-2xl text-gray-200 mb-8">
                     Deutscher FiveM Roleplay Server • Realistisches RP • Wirtschaft • Events
                 </p>
-
                 <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="fivem://connect/134.255.209.35:10090" class="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl">
+                    <a href="fivem://connect/134.255.209.35:10090" class="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl hover:scale-105">
                         Jetzt Spielen
                     </a>
                     <a href="https://discord.gg/HHyd7C7sZe" target="_blank"
-                        class="border border-blue-400 hover:bg-blue-500 hover:text-white shadow-[0_0_25px_rgba(59,130,246,0.5)] transition px-8 py-4 rounded-2xl text-lg font-bold">
+                        class="border border-blue-400 hover:bg-blue-500 hover:text-white shadow-[0_0_25px_rgba(59,130,246,0.5)] transition px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105">
                         Discord Beitreten
                     </a>
                 </div>
@@ -66,20 +95,19 @@
 
         <section class="py-24 px-6 bg-zinc-950">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-16 text-blue-400">
+                <h2 class="text-5xl font-bold text-center mb-16 text-blue-400 hover:scale-105 transition-transform">
                     Warum Chemnitz City ┃ FiveM?
                 </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
+                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 hover:scale-105 transition">
                         <h3 class="text-2xl font-bold mb-4 text-blue-300">Realistisches Roleplay</h3>
                         <p class="text-gray-300 leading-relaxed">Erlebe realistisches deutsches RP mit aktiven Spielern und spannenden Storys.</p>
                     </div>
-                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
+                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 hover:scale-105 transition">
                         <h3 class="text-2xl font-bold mb-4 text-blue-300">Einzigartiges Erlebnis</h3>
                         <p class="text-gray-300 leading-relaxed">Vielfältige Möglichkeiten, deine eigene Geschichte in unserer Welt zu schreiben.</p>
                     </div>
-                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 transition">
+                    <div class="bg-zinc-900/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 shadow-[0_0_35px_rgba(59,130,246,0.15)] hover:border-blue-500 hover:scale-105 transition">
                         <h3 class="text-2xl font-bold mb-4 text-blue-300">Custom Scripts</h3>
                         <p class="text-gray-300 leading-relaxed">Individuelle Fahrzeuge, Jobs, Mapping und einzigartige Features.</p>
                     </div>
@@ -89,41 +117,36 @@
 
         <section class="py-24 px-6 bg-black">
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
+                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center hover:scale-105 transition">
                     <h3 id="discord-online" class="text-5xl font-bold text-blue-400 mb-2">Laden...</h3>
                     <p class="text-gray-300 text-xl mb-4 font-semibold">Mitglieder online</p>
                     <div class="text-sm text-gray-500 border-t border-zinc-800 pt-3 w-full">
                         Insgesamt: <span id="discord-total" class="text-blue-400 font-bold">Laden...</span> Mitglieder
                     </div>
                 </div>
-
-                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
+                <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center hover:scale-105 transition">
                     <h3 class="text-5xl font-bold text-blue-400 mb-4">50+</h3>
                     <p class="text-gray-300 text-xl">Custom Fahrzeuge</p>
                 </div>
-
             </div>
         </section>
 
         <section id="join" class="py-24 px-6 bg-zinc-950 text-center">
             <div class="max-w-7xl mx-auto flex items-center justify-center gap-12 flex-col sm:flex-row">
-                <img src="myLogo.png" alt="Chemnitz City Logo" class="w-48 h-48 object-cover rounded-3xl shadow-[0_0_50px_rgba(59,130,246,0.4)]">
-
+                <img src="myLogo.png" alt="Chemnitz City Logo" class="w-48 h-48 object-cover rounded-3xl shadow-[0_0_50px_rgba(59,130,246,0.4)] hover:scale-105 transition">
                 <div class="text-center sm:text-left">
-                    <h2 class="text-5xl font-bold mb-6 text-blue-400">
+                    <h2 class="text-5xl font-bold mb-6 text-blue-400 hover:scale-105 transition-transform">
                         Werde Teil von Chemnitz City ┃ FiveM
                     </h2>
                     <p class="text-gray-300 text-xl max-w-3xl mb-10">
                         Tauche ein in eine einzigartige Roleplay-Welt mit realistischer Wirtschaft,
                         aktiven Fraktionen und spannenden Events.
                     </p>
-
                     <div class="flex flex-col md:flex-row justify-center sm:justify-start gap-4">
-                        <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl text-center">
+                        <a href="fivem://connect/134.255.209.35:10090" class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl text-lg font-bold shadow-2xl text-center hover:scale-105">
                             Mit Server Verbinden
                         </a>
-                        <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold text-center">
+                        <a href="https://discord.gg/HHyd7C7sZe" target="_blank" class="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold text-center hover:scale-105">
                             Discord Öffnen
                         </a>
                     </div>
@@ -139,47 +162,30 @@
                 <p class="text-center text-gray-400 mb-16 max-w-xl mx-auto">
                     Wähle deinen Lebensweg in Chemnitz City. Klicke auf eine Fraktion, um exklusive Details und Aufgabenbereiche einzusehen.
                 </p>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <div onclick="openFactionModal('Polizei')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">Polizei</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Staatliche Exekutive</p>
+                    <div onclick="openFactionModal('Polizei')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Polizei</h3>
                     </div>
-                    <div onclick="openFactionModal('EMS')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-red-400 transition-colors">EMS</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Medizinischer Dienst</p>
+                    <div onclick="openFactionModal('EMS')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">EMS</h3>
                     </div>
-                    <div onclick="openFactionModal('ADAC')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-yellow-500/60 hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-yellow-400 transition-colors">ADAC</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Pannenhilfe & Schutz</p>
+                    <div onclick="openFactionModal('ADAC')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">ADAC</h3>
                     </div>
-                    <div onclick="openFactionModal('Gangs')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-orange-500/60 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-orange-400 transition-colors">Gangs</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Straßenkriminalität</p>
+                    <div onclick="openFactionModal('Gangs')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Gangs</h3>
                     </div>
-                    <div onclick="openFactionModal('Mechaniker')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors">Mechaniker</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Tuning & Reparaturen</p>
+                    <div onclick="openFactionModal('Mechaniker')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Mechaniker</h3>
                     </div>
-                    <div onclick="openFactionModal('Mafia')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-purple-500/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">Mafia</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Organisiertes Verbrechen</p>
+                    <div onclick="openFactionModal('Mafia')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Mafia</h3>
                     </div>
-                    <div onclick="openFactionModal('Taxi')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-cyan-500/60 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">Taxi</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Personenbeförderung</p>
+                    <div onclick="openFactionModal('Taxi')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Taxi</h3>
                     </div>
-                    <div onclick="openFactionModal('Bürger')" class="group relative cursor-pointer bg-zinc-900/40 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-slate-400/60 hover:shadow-[0_0_30px_rgba(148,163,184,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                        <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-slate-300 transition-colors">Bürger</h3>
-                        <p class="text-xs text-zinc-500 mt-2 group-hover:text-zinc-400 transition-colors">Zivilleben & Wirtschaft</p>
+                    <div onclick="openFactionModal('Bürger')" class="cursor-pointer bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-blue-500/20 shadow-[0_0_25px_rgba(59,130,246,0.1)] hover:border-blue-500 hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white">Bürger</h3>
                     </div>
                 </div>
             </div>
@@ -198,45 +204,9 @@
         </div>
     </div>
 
-    <div id="tab-content-regelwerk" class="tab-content is-hidden">
-        <section class="py-24 px-6 bg-black min-h-[75vh]">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Server-Regelwerk</h2>
-                <p class="text-center text-gray-400 mb-12">Bitte halte dich stets an die Regeln, um ein faires Spielklima zu garantieren.</p>
-                
-                <div class="space-y-6">
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§1 Allgemeines Verhalten</h3>
-                        <p class="text-gray-300 leading-relaxed">Respektvoller Umgang miteinander außerhalb des Roleplays ist absolute Pflicht. Beleidigungen, OOC-Hate oder toxisches Verhalten werden nicht geduldet.</p>
-                    </div>
-
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§2 Fail-RP & Power-RP</h3>
-                        <p class="text-gray-300 leading-relaxed">Aktionen, die unrealistisch sind oder dem Gegenüber keinerlei Handlungsspielraum lassen (Power-RP), sind strengstens verboten. Spiele deine Situationen realistisch aus.</p>
-                    </div>
-
-                    <div class="bg-zinc-900/40 backdrop-blur-xl p-6 rounded-2xl border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:border-blue-500/40 transition duration-300">
-                        <h3 class="text-xl font-bold text-blue-400 mb-3">§3 RDM & VDM</h3>
-                        <p class="text-gray-300 leading-relaxed">Das wahllose Töten (Random Deathmatch) oder Überfahren (Vehicle Deathmatch) von Spielern ohne triftigen RP-Hintergrund bzw. Call führt zu harten Sanktionen.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="tab-content-tebex" class="tab-content is-hidden">
-        <section class="py-24 px-6 bg-black min-h-[75vh] flex items-center justify-center">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-5xl font-bold mb-6 text-blue-400">Chemnitz City Store</h2>
-                <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-10">
-                    Du möchtest unser Projekt unterstützen und dir exklusive Ingame-Vorteile wie Custom-Fahrzeuge, VIP-Status oder kosmetische Items sichern? Besuche unseren offiziellen Tebex-Shop!
-                </p>
-                <a href="https://tebex.io" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold px-10 py-5 rounded-2xl text-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:scale-105 transition-all">
-                    Zum Webshop
-                </a>
-            </div>
-        </section>
-    </div>
+    <div id="tab-content-regelwerk" class="tab-content is-hidden p-24 text-center">Regelwerk-Bereich</div>
+    
+    <div id="tab-content-tebex" class="tab-content is-hidden p-24 text-center">Tebex-Shop-Bereich</div>
 
     <footer class="border-t border-zinc-800 py-8 text-center text-gray-500 bg-zinc-950">
         <p>© 2026 Chemnitz City ┃ FiveM • Alle Rechte vorbehalten</p>
@@ -270,7 +240,7 @@
             "ADAC": "Der offizielle Pannen- und Abschleppdienst der Stadt.\n\nDu unterstützt die Bürger bei technischen Defekten, reparierst Fahrzeuge direkt vor Ort, entfernst verkehrswidrig abgestellte Autos im Auftrag der Polizei und hältst den Verkehrsfluss sauber aufrecht.",
             "Gangs": "Das raue Pflaster und die Unterwelt von Chemnitz.\n\nGründe deine eigene Straßengang oder schließe dich einer bestehenden Crew an. Kämpfe um die Vorherrschaft in den Vierteln, sichere dir Routen im illegalen Handel und plane actionreiche Überfälle.",
             "Mechaniker": "Das Herz der Tuning-Szene in Chemnitz City.\n\nIn den modernen Werkstätten motzt du die Triebwerke der Bürger auf, installierst optische Custom-Upgrades, führst regelmäßige Inspektionen durch und sorgst dafür, dass jeder Motor perfekt abgestimmt ist.",
-            "Mafia": "Das organisierte Verbrechen, das die Fäden im Geheimen zieht.\n\nWeit weg vom Chaos der Straße agiert die Mafia mit eiserner Disziplin. Sie kontrolliert verdeckte Märkte, betreibt strategische Geldwäsche und klärt diplomatische oder bewaffnete Konflikte im Verborgenen.",
+            "Mafia": "Das organisierte Verbrechen, das die Fäden im Geheimen zieht.\n\nWeit weg vom Chaos der Straße agiert die Mafia mit eiserner Disziplin. Sie kontrolliert verdeckte Märkte, betreibt strategic Geldwäsche und klärt diplomatische oder bewaffnete Konflikte im Verborgenen.",
             "Taxi": "Der verlässliche Transport- und Chauffeurservice für alle Lebenslagen.\n\nBringe deine Fahrgäste sicher, schnell und komfortabel an ihr Ziel. Nebenbei bist du der beste Zuhörer der Stadt und erfährst als Erster die heißesten Gerüchte direkt von der Rückbank.",
             "Bürger": "Das lebendige Fundament unseres gesamten Servers.\n\nBaue dir dein Leben von Grund auf auf. Gehe klassischen, legalen Berufen nach, erwirtschafte dein Vermögen, investiere in exklusive Immobilien sowie Fahrzeuge und gestalte dein RP-Schicksal völlig frei."
         };
@@ -297,67 +267,34 @@
             }
         }
 
-        // DISCORD LIVE STATS LOGIK MIT MULTI-PROXY FALLBACK
         const DISCORD_INVITE_CODE = "HHyd7C7sZe";
-        const baseDiscordUrl = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`;
-        
-        const proxies = [
-            `https://cors-anywhere.azm.workers.dev/?url=${encodeURIComponent(baseDiscordUrl)}`,
-            `https://api.allorigins.win/get?url=${encodeURIComponent(baseDiscordUrl)}`
-        ];
+        const targetUrl = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`;
 
-        function tryFetchDiscordData(proxyIndex) {
-            if (proxyIndex >= proxies.length) {
-                console.error("Alle Discord-Proxies sind fehlgeschlagen.");
-                setDiscordFallbackValues();
-                return;
-            }
-
-            fetch(proxies[proxyIndex])
-                .then(response => {
-                    if (!response.ok) throw new Error("Proxy-Fehler");
-                    return response.json();
-                })
-                .then(data => {
-                    let jsonData;
-                    if (data && data.contents) {
-                        jsonData = JSON.parse(data.contents);
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
+            .then(response => {
+                if (response.ok) return response.json();
+                throw new Error('Netzwerk-Fehler beim Proxy');
+            })
+            .then(data => {
+                const discordData = JSON.parse(data.contents);
+                if (discordData) {
+                    if (discordData.approximate_presence_count !== undefined) {
+                        document.getElementById('discord-online').innerText = discordData.approximate_presence_count;
                     } else {
-                        jsonData = data;
+                        document.getElementById('discord-online').innerText = "Online";
                     }
-
-                    if (jsonData && (jsonData.approximate_presence_count !== undefined || jsonData.code === 404)) {
-                        updateDiscordUI(jsonData);
+                    if (discordData.approximate_member_count !== undefined) {
+                        document.getElementById('discord-total').innerText = discordData.approximate_member_count;
                     } else {
-                        throw new Error("Ungültiges Datenformat empfangen");
+                        document.getElementById('discord-total').innerText = "-";
                     }
-                })
-                .catch(err => {
-                    console.warn(`Proxy ${proxyIndex} fehlgeschlagen, versuche nächsten...`, err);
-                    tryFetchDiscordData(proxyIndex + 1);
-                });
-        }
-
-        function updateDiscordUI(data) {
-            if (data.approximate_presence_count !== undefined) {
-                document.getElementById('discord-online').innerText = data.approximate_presence_count;
-            } else {
+                }
+            })
+            .catch(error => {
+                console.error("Discord API Fehler abgefangen:", error);
                 document.getElementById('discord-online').innerText = "Online";
-            }
-
-            if (data.approximate_member_count !== undefined) {
-                document.getElementById('discord-total').innerText = data.approximate_member_count;
-            } else {
                 document.getElementById('discord-total').innerText = "-";
-            }
-        }
-
-        function setDiscordFallbackValues() {
-            document.getElementById('discord-online').innerText = "Online";
-            document.getElementById('discord-total').innerText = "-";
-        }
-
-        tryFetchDiscordData(0);
+            });
     </script>
 </body>
 </html>
