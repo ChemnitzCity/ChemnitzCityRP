@@ -92,19 +92,21 @@
     </section>
 
     <section class="py-24 px-6 bg-zinc-950">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-                <h3 id="discord-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
-                <p class="text-gray-300 text-xl">Mitglieder insgesamt</p>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+            
+            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
+                <h3 id="discord-online" class="text-5xl font-bold text-green-400 mb-2">Laden...</h3>
+                <p class="text-gray-300 text-xl mb-4 font-semibold">Mitglieder online</p>
+                <div class="text-sm text-gray-500 border-t border-zinc-800 pt-3 w-full">
+                    Insgesamt: <span id="discord-total" class="text-blue-400 font-bold">Laden...</span> Mitglieder
+                </div>
             </div>
-            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-                <h3 id="fivem-count" class="text-5xl font-bold text-blue-400 mb-4">Laden...</h3>
-                <p class="text-gray-300 text-xl">Spieler auf dem Server</p>
-            </div>
-            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+
+            <div class="bg-zinc-900/80 backdrop-blur-xl rounded-3xl p-10 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.15)] flex flex-col justify-center items-center">
                 <h3 class="text-5xl font-bold text-blue-400 mb-4">50+</h3>
                 <p class="text-gray-300 text-xl">Custom Fahrzeuge</p>
             </div>
+
         </div>
     </section>
 
@@ -132,51 +134,31 @@
     </footer>
 
     <script>
-        // --- DEINE SEITEN-EINSTELLUNGEN ---
-        const DISCORD_INVITE_CODE = "HHyd7C7sZe"; // Euer Discord-Link-Code
-        const FIVEM_SERVER_IP = "134.255.209.35:10090"; // Eure Server-IP
+        const DISCORD_INVITE_CODE = "HHyd7C7sZe";
 
-        // Discord Abfrage über die Einladungs-API
+        // Discord Abfrage über die offizielle Schnittstelle
         fetch(`https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`)
             .then(response => response.json())
             .then(data => {
-                if(data && data.approximate_member_count !== undefined) {
-                    document.getElementById('discord-count').innerText = data.approximate_member_count;
-                } else {
-                    document.getElementById('discord-count').innerText = "Bereit";
+                if(data) {
+                    // Setzt die Online-Zahl ein
+                    if(data.approximate_presence_count !== undefined) {
+                        document.getElementById('discord-online').innerText = data.approximate_presence_count;
+                    } else {
+                        document.getElementById('discord-online').innerText = "Bereit";
+                    }
+                    
+                    // Setzt die Gesamt-Mitgliederzahl ein
+                    if(data.approximate_member_count !== undefined) {
+                        document.getElementById('discord-total').innerText = data.approximate_member_count;
+                    } else {
+                        document.getElementById('discord-total').innerText = "-";
+                    }
                 }
             })
             .catch(() => {
-                document.getElementById('discord-count').innerText = "Online";
-            });
-
-        // FiveM Live-Abfrage über den FiveM API-Server (Tunnelt die CORS-Sperre)
-        fetch(`https://cors-anywhere.herokuapp.com/https://servers-frontend.fivem.net/api/servers/single/${FIVEM_SERVER_IP}`, {
-            headers: { 'X-Requested-With': 'XMLHttpRequest' }
-        })
-            .then(response => response.json())
-            .then(data => {
-                if(data && data.Data && data.Data.clients !== undefined) {
-                    // Zeigt "Aktuelle Spieler / Maximale Slots" an (z.B. 2/32)
-                    document.getElementById('fivem-count').innerText = `${data.Data.clients}/${data.Data.sv_maxclients}`;
-                } else {
-                    document.getElementById('fivem-count').innerText = "Online";
-                }
-            })
-            .catch(() => {
-                // Zweiter Versuch direkt über die lokale Server-Schnittstelle, falls der Proxy überlastet ist
-                fetch(`https://cors-anywhere.herokuapp.com/http://${FIVEM_SERVER_IP}/players.json`)
-                    .then(res => res.json())
-                    .then(players => {
-                        if(Array.isArray(players)) {
-                            document.getElementById('fivem-count').innerText = players.length;
-                        } else {
-                            document.getElementById('fivem-count').innerText = "Online";
-                        }
-                    })
-                    .catch(() => {
-                        document.getElementById('fivem-count').innerText = "Online";
-                    });
+                document.getElementById('discord-online').innerText = "Online";
+                document.getElementById('discord-total').innerText = "-";
             });
     </script>
 
