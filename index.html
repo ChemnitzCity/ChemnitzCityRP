@@ -52,8 +52,8 @@
 </head>
 <body class="text-white antialiased selection:bg-blue-600 selection:text-white">
 
-    <audio id="bg-music" loop>
-        <source src="Revenge (Extended).mp3" type="audio/mpeg">
+    <audio id="bg-music" loop preload="auto">
+        <source src="load.mp3" type="audio/mpeg">
     </audio>
 
     <nav class="fixed w-full z-50 glass-nav">
@@ -206,23 +206,24 @@
         const icon = document.getElementById('music-icon');
         const volumeSlider = document.getElementById('volume-slider');
         
-        // Voreingestellte Lautstärke (20% für angenehmen Background-Sound)
+        // Voreingestellte Lautstärke (20%)
         music.volume = 0.2;
 
-        // Versucht die Musik beim ersten Klick auf die Website automatisch zu starten
+        // Startet Musik automatisch beim ersten Klick auf die Website
         document.body.addEventListener('click', () => {
             if (music.paused) {
                 music.play().then(() => {
                     icon.className = "fa-solid fa-pause text-white opacity-90";
-                }).catch(err => console.log("Autoplay blockiert:", err));
+                }).catch(err => console.log("Autoplay vom Browser blockiert:", err));
             }
         }, { once: true });
 
-        // Start / Stop Funktion
+        // Manuelle Start / Stop Funktion über das Dashboard
         function toggleMusic() {
             if (music.paused) {
-                music.play();
-                icon.className = "fa-solid fa-pause text-white opacity-90";
+                music.play().then(() => {
+                    icon.className = "fa-solid fa-pause text-white opacity-90";
+                }).catch(err => alert("Datei wurde nicht gefunden. Stelle sicher, dass sie 'load.mp3' heißt und im selben Ordner liegt!"));
             } else {
                 music.pause();
                 icon.className = "fa-solid fa-play text-white opacity-90";
