@@ -3,249 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemnitz City Roleplay | FiveM Server</title>
+    <title>Chemnitz City | Premium FiveM Roleplay</title>
     <!-- Tailwind CSS v4 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Space Grotesk (Modern & Gaming) -->
+    <!-- Google Fonts: Inter & DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,800;1,9..40,300&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #030712;
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f17;
         }
-        /* Neon Glow Effekte */
-        .glow-amber {
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+        h1, h2, h3, h4, .font-display {
+            font-family: 'DM Sans', sans-serif;
         }
-        .glow-amber:hover {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
-        }
-        .glow-card:hover {
-            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
-            border-color: rgba(245, 158, 11, 0.4);
-        }
-        /* Animierter Background-Verlauf */
-        .bg-gradient-animated {
-            background: linear-gradient(-45deg, #030712, #0f172a, #1e1b4b, #030712);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        /* Partikel-Container */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
+        /* Subtiler Industrie-Raster-Hintergrund */
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
     </style>
 </head>
-<body class="text-slate-100 antialiased overflow-x-hidden">
+<body class="text-slate-200 antialiased selection:bg-yellow-500 selection:text-slate-900">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-slate-950/60 backdrop-blur-xl border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-3 h-3 bg-amber-500 rounded-full animate-ping absolute"></div>
-                <span class="text-2xl font-bold tracking-wider text-white relative">
-                    CHEMNITZ<span class="text-amber-500 font-black">.CITY</span>
-                </span>
+    <!-- Header Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0b0f17]/90 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center text-slate-950 font-black text-lg">C</div>
+                <span class="text-xl font-bold tracking-tight text-white font-display">Chemnitz<span class="text-yellow-500">City</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wide">
-                <a href="#home" class="text-slate-400 hover:text-white transition-colors">START</a>
-                <a href="#features" class="text-slate-400 hover:text-white transition-colors">FEATURES</a>
-                <a href="#fraktionen" class="text-slate-400 hover:text-white transition-colors">FRAKTIONEN</a>
-                <a href="#join" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-5 py-2.5 rounded-lg font-bold transition-all shadow-lg shadow-amber-500/20 glow-amber">EINREISEN</a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest uppercase">
+                <a href="#home" class="text-slate-400 hover:text-white transition-colors">Übersicht</a>
+                <a href="#features" class="text-slate-400 hover:text-white transition-colors">Konzept</a>
+                <a href="#fraktionen" class="text-slate-400 hover:text-white transition-colors">Strukturen</a>
+                <a href="https://discord.gg/AsQ3rAJYK9" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-slate-950 px-5 py-2.5 rounded font-bold transition-all uppercase tracking-wider">Projekt Beitreten</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section mit Partikeln -->
-    <header id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-animated overflow-hidden pt-20">
-        <!-- Partikel Effekt im Hintergrund -->
-        <div id="particles-js"></div>
+    <!-- Hero Bereich -->
+    <header id="home" class="relative min-h-screen flex items-center grid-bg pt-20 border-b border-slate-800/40">
+        <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Linker Textbereich -->
+            <div class="md:col-span-7 space-y-6 text-left">
+                <div class="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                    <span>Hardcore Roleplay Projekt</span>
+                </div>
+                
+                <!-- Neuer, neutraler Slogan -->
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-none">
+                    Echtes Roleplay. <br>
+                    Deine <span class="text-yellow-500">Story.</span>
+                </h1>
+                
+                <p class="text-slate-400 font-light text-lg max-w-xl leading-relaxed">
+                    Willkommen auf Chemnitz City. Wir kombinieren eine reife Community mit einem durchdachten Wirtschaftssystem und modernster Ingame-Voice-Technologie für ein kompromissloses Simulations-Erlebnis.
+                </p>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 max-w-5xl mx-auto text-center px-6 space-y-8">
-            <div class="inline-flex items-center space-x-2 bg-slate-900/80 backdrop-blur-md border border-slate-800 px-4 py-2 rounded-full shadow-2xl">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                <span class="text-xs font-bold tracking-widest uppercase text-slate-300">Server Online &bull; S saltychat 3.1</span>
+                <!-- Server Daten & Copy Feld -->
+                <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-lg flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 max-w-lg">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-slate-800 rounded flex items-center justify-center text-slate-400">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Serveradresse / IP</p>
+                            <p class="text-sm font-mono text-slate-300 font-bold">134.255.209.35:10090</p>
+                        </div>
+                    </div>
+                    <button onclick="copyIP()" class="bg-slate-800 hover:bg-slate-700 text-yellow-500 font-semibold px-4 py-2 rounded text-xs tracking-wider uppercase transition-all flex items-center justify-center space-x-2 border border-slate-700 cursor-pointer">
+                        <i class="fa-solid fa-copy"></i>
+                        <span id="ip-text">Kopieren</span>
+                    </button>
+                </div>
+
+                <!-- Haupt-Aktionen -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                    <a href="fivem://connect/134.255.209.35:10090" class="bg-yellow-500 hover:bg-yellow-600 text-slate-950 font-bold px-8 py-4 rounded text-center tracking-wider uppercase text-sm transition-all shadow-lg shadow-yellow-500/10">
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i> Direkt Verbinden
+                    </a>
+                    <a href="https://discord.gg/AsQ3rAJYK9" target="_blank" class="bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded text-center tracking-wider uppercase text-sm transition-all">
+                        <i class="fa-brands fa-discord mr-2 text-indigo-400"></i> Discord Server
+                    </a>
+                </div>
             </div>
 
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter uppercase text-white">
-                Erlebe den <br class="hidden md:inline">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Osten</span> wie nie zuvor.
-            </h1>
-
-            <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
-                Chemnitz City ist kein Standard-Server. Wir bieten dir kompromissloses Hardcore-Roleplay, ein maßgeschneidertes Wirtschaftssystem und eine Community, die echtes Storytelling schätzt.
-            </p>
-
-            <!-- Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="https://cfx.re/join/xxxxxx" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl text-md tracking-wider uppercase flex items-center justify-center space-x-3 transition-all transform hover:-translate-y-1 shadow-xl glow-amber">
-                    <i class="fa-solid fa-play"></i>
-                    <span>Direkt Connect</span>
-                </a>
-                <a href="https://discord.gg/dein-server" target="_blank" class="w-full sm:w-auto bg-slate-900/60 hover:bg-slate-900 backdrop-blur-md text-white border border-slate-800 hover:border-slate-700 font-bold px-8 py-4 rounded-xl text-md tracking-wider uppercase flex items-center justify-center space-x-3 transition-all transform hover:-translate-y-1 shadow-xl">
-                    <i class="fa-brands fa-discord text-indigo-400"></i>
-                    <span>Discord Community</span>
-                </a>
+            <!-- Rechter Infoblock (Dashboard Optik) -->
+            <div class="md:col-span-5 hidden md:block">
+                <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl space-y-6 backdrop-blur-sm">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">System-Status</span>
+                        <span class="bg-green-500/10 text-green-400 text-[10px] font-bold px-2 py-0.5 rounded border border-green-500/20 uppercase tracking-wider">Live</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Sprachsystem</span>
+                            <span class="text-slate-300 font-semibold">Ingame Voice (3D)</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Wirtschaft</span>
+                            <span class="text-slate-300 font-semibold">Realistisch / Progressiv</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Mindestalter</span>
+                            <span class="text-slate-300 font-semibold">16 Jahre</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Unteres Design-Element (Schräge Trennung) -->
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform translate-y-1">
-            <svg class="relative block w-full h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
-                <path d="M1200,1200H0V0Z" class="fill-[#060b18]"></path>
-            </svg>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="bg-[#060b18] relative z-20">
+    <!-- Konzept / Features -->
+    <section id="features" class="py-28 max-w-6xl mx-auto px-6">
+        <div class="space-y-3 mb-16 border-l-4 border-yellow-500 pl-4">
+            <p class="text-yellow-500 text-xs font-bold tracking-widest uppercase">Das Fundament</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white">Unser Serverkonzept</h2>
+        </div>
 
-        <!-- Features Section -->
-        <section id="features" class="py-32 max-w-7xl mx-auto px-6">
-            <div class="text-center space-y-4 mb-20">
-                <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">// HIGHLIGHTS</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight">Unsere Features</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-lg space-y-4">
+                <div class="text-yellow-500 text-2xl"><i class="fa-solid fa-microphone-lines"></i></div>
+                <h3 class="text-lg font-bold text-white uppercase tracking-wide">Immersives Voice</h3>
+                <p class="text-slate-400 font-light text-sm leading-relaxed">Keine externen Plugins nötig. Unser natives Ingame-Voice sorgt für perfekte Qualität, lippensynchrone Animationen und realistischen 3D-Sound.</p>
+            </div>
+            <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-lg space-y-4">
+                <div class="text-yellow-500 text-2xl"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3 class="text-lg font-bold text-white uppercase tracking-wide">Faires Regelwerk</h3>
+                <p class="text-slate-400 font-light text-sm leading-relaxed">Wir legen großen Wert auf logisches, nachvollziehbares RP. Unser Admin-Team agiert stets unparteiisch, transparent und auf Augenhöhe.</p>
+            </div>
+            <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-lg space-y-4">
+                <div class="text-yellow-500 text-2xl"><i class="fa-solid fa-industry"></i></div>
+                <h3 class="text-lg font-bold text-white uppercase tracking-wide">Echte Karrieren</h3>
+                <p class="text-slate-400 font-light text-sm leading-relaxed">Egal ob legale Fabrikarbeit, schuften im Handwerk oder der Aufbau eines kriminellen Syndikats – jeder Pfad bietet Tiefgang.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strukturen / Fraktionen -->
+    <section id="fraktionen" class="py-24 bg-slate-900/20 border-y border-slate-900/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="space-y-3 mb-16 border-l-4 border-yellow-500 pl-4">
+                <p class="text-yellow-500 text-xs font-bold tracking-widest uppercase">Die Fraktionen</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white">Staatliche & Private Organe</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-slate-950/40 backdrop-blur-md border border-slate-900/80 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 glow-card">
-                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-500/5 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/10">
-                        <i class="fa-solid fa-gauge-high"></i>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Beamtentum -->
+                <div class="border border-slate-800/80 p-6 rounded bg-[#0b0f17]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-white uppercase tracking-wide">Polizeidirektion</h4>
+                        <span class="text-blue-500 text-sm bg-blue-500/10 px-2 py-1 rounded font-mono text-xs">PD</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-wide">High Performance</h3>
-                    <p class="text-slate-400 font-light leading-relaxed">Keine nervigen Ruckler oder FPS-Einbrüche. Unsere Scripts sind hochgradig optimiert für ein flüssiges Spielerlebnis.</p>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">Modernste Ausrüstung und strategisches Vorgehen schützen die Bürger vor dem Verbrechen.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-slate-950/40 backdrop-blur-md border border-slate-900/80 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 glow-card">
-                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-500/5 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/10">
-                        <i class="fa-solid fa-building-columns"></i>
+                <!-- Rettungsdienst -->
+                <div class="border border-slate-800/80 p-6 rounded bg-[#0b0f17]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-white uppercase tracking-wide">Rettungsdienst</h4>
+                        <span class="text-red-500 text-sm bg-red-500/10 px-2 py-1 rounded font-mono text-xs">MD</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-wide">Echte Ökonomie</h3>
-                    <p class="text-slate-400 font-light leading-relaxed">Ein faires und durchdachtes Preissystem. Jedes Fahrzeug, jedes Haus und jedes Item hat einen reellen Gegenwert.</p>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">Schnelle medizinische Notversorgung im gesamten Stadtgebiet. Deine fraktionsübergreifende Lebensversicherung.</p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-slate-950/40 backdrop-blur-md border border-slate-900/80 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 glow-card">
-                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-500/5 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 border border-amber-500/10">
-                        <i class="fa-solid fa-mask"></i>
+                <!-- Freie Wirtschaft -->
+                <div class="border border-slate-800/80 p-6 rounded bg-[#0b0f17]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-white uppercase tracking-wide">Gewerbe & Wirtschaft</h4>
+                        <span class="text-yellow-500 text-sm bg-yellow-500/10 px-2 py-1 rounded font-mono text-xs">CORP</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-wide">Krimineller Untergrund</h3>
-                    <p class="text-slate-400 font-light leading-relaxed">Einzigartige Routen, Heists und Drogensysteme, die strategisches Vorgehen und echtes RP erfordern.</p>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">Gründe Firmen, manage Logistikketten oder biete Dienstleistungen an. Der freie Markt wartet auf dich.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Fraktionen Section -->
-        <section id="fraktionen" class="py-24 bg-slate-950/30 border-y border-slate-950">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center space-y-4 mb-20">
-                    <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">// DEIN WEG</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight">Wähle deine Fraktion</h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- PD -->
-                    <div class="group relative overflow-hidden rounded-2xl bg-slate-950 border border-slate-900 h-80 flex flex-col justify-end p-6 transition-all">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
-                        <i class="fa-solid fa-shield-halved absolute top-6 right-6 text-4xl text-blue-500/20 group-hover:text-blue-500/40 transition-all z-0"></i>
-                        <div class="relative z-20 space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            <h4 class="text-xl font-bold uppercase text-blue-400">Polizei</h4>
-                            <p class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Sorge für Recht, Ordnung und Sicherheit auf Chemnitz' Straßen.</p>
-                        </div>
-                    </div>
-                    <!-- MD -->
-                    <div class="group relative overflow-hidden rounded-2xl bg-slate-950 border border-slate-900 h-80 flex flex-col justify-end p-6 transition-all">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
-                        <i class="fa-solid fa-heart-pulse absolute top-6 right-6 text-4xl text-red-500/20 group-hover:text-red-500/40 transition-all z-0"></i>
-                        <div class="relative z-20 space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            <h4 class="text-xl font-bold uppercase text-red-400">Medics</h4>
-                            <p class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Rette Leben rund um die Uhr. Jede Sekunde zählt.</p>
-                        </div>
-                    </div>
-                    <!-- Justiz -->
-                    <div class="group relative overflow-hidden rounded-2xl bg-slate-950 border border-slate-900 h-80 flex flex-col justify-end p-6 transition-all">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
-                        <i class="fa-solid fa-gavel absolute top-6 right-6 text-4xl text-amber-500/20 group-hover:text-amber-500/40 transition-all z-0"></i>
-                        <div class="relative z-20 space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            <h4 class="text-xl font-bold uppercase text-amber-400">Justiz</h4>
-                            <p class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Verhandle Fälle vor Gericht und vertrete das Gesetz.</p>
-                        </div>
-                    </div>
-                    <!-- Mafia/Gangs -->
-                    <div class="group relative overflow-hidden rounded-2xl bg-slate-950 border border-slate-900 h-80 flex flex-col justify-end p-6 transition-all">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
-                        <i class="fa-solid fa-skull absolute top-6 right-6 text-4xl text-purple-500/20 group-hover:text-purple-500/40 transition-all z-0"></i>
-                        <div class="relative z-20 space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            <h4 class="text-xl font-bold uppercase text-purple-400">Kriminalität</h4>
-                            <p class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Kontrolliere das Business im Schatten und baue dein Imperium auf.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Einreise (CTA) -->
-        <section id="join" class="py-32 max-w-4xl mx-auto px-6 text-center space-y-8">
-            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tight">Bereit für die <span class="text-amber-500">Einreise</span>?</h2>
-            <p class="text-slate-400 max-w-xl mx-auto font-light leading-relaxed">
-                Unser Whitelist-Verfahren ist unkompliziert, stellt aber ein hohes RP-Niveau sicher. Join unserem Discord, lies das Regelwerk und sprich kurz mit unserem Team.
-            </p>
-            <div class="pt-4">
-                <a href="https://discord.gg/dein-server" target="_blank" class="inline-flex bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-10 py-5 rounded-xl text-lg uppercase tracking-wider transition-all shadow-2xl shadow-amber-500/20 glow-amber">
-                    Jetzt Whitelisten lassen
-                </a>
-            </div>
-        </section>
-
-    </main>
+    <!-- Whitelist Hinweis -->
+    <section class="py-28 max-w-3xl mx-auto px-6 text-center space-y-6">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white uppercase tracking-tight">Werde Teil der <span class="text-yellow-500">Community</span></h2>
+        <p class="text-slate-400 font-light leading-relaxed">
+            Wir verzichten auf stundenlange, komplizierte Fragebögen. Uns ist wichtig, dass du dein Konzept verstehst und Lust auf gutes Rollenspiel hast. Betrete unseren Discord, um die Einreise zu starten.
+        </p>
+        <div class="pt-4">
+            <a href="https://discord.gg/AsQ3rAJYK9" target="_blank" class="inline-flex bg-yellow-500 hover:bg-yellow-600 text-slate-950 font-bold px-8 py-4 rounded tracking-wider uppercase text-sm transition-all shadow-lg shadow-yellow-500/10">
+                Einreise-Gespräch starten
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-center text-sm text-slate-600 relative z-20">
-        <div class="max-w-7xl mx-auto px-6 space-y-4">
-            <p class="font-medium tracking-widest text-slate-400 uppercase">CHEMNITZ CITY ROLEPLAY &copy; 2026</p>
-            <p class="text-xs max-w-md mx-auto text-slate-500 leading-relaxed">
-                Dieses Projekt steht in keinerlei Verbindung mit der Rockstar Games, Take-Two Interactive oder den offiziellen Behörden der Stadt Chemnitz.
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-center text-xs text-slate-600">
+        <div class="max-w-6xl mx-auto px-6 space-y-3">
+            <p class="font-semibold tracking-widest text-slate-400 uppercase font-display">CHEMNITZ CITY ROLEPLAY &copy; 2026</p>
+            <p class="max-w-md mx-auto text-slate-500 leading-relaxed font-light">
+                Diese Webpräsenz ist ein Fan-Projekt für FiveM und steht in keiner Verbindung zu Rockstar Games oder Take-Two Interactive.
             </p>
         </div>
     </footer>
 
-    <!-- Particles.js Library & Config für den coolen Background-Effekt -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- JS Script für die Kopierfunktion -->
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#f59e0b" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.15, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#f59e0b", "opacity": 0.05, "width": 1 },
-                "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
-            },
-            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false } } },
-            "retina_detect": true
-        });
+        function copyIP() {
+            const ip = "134.255.209.35:10090";
+            navigator.clipboard.writeText(ip).then(() => {
+                const ipText = document.getElementById('ip-text');
+                ipText.innerText = "Kopiert!";
+                setTimeout(() => {
+                    ipText.innerText = "Kopieren";
+                }, 2000);
+            }).catch(err => {
+                console.error('Fehler beim Kopieren: ', err);
+            });
+        }
     </script>
 </body>
 </html>
