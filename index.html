@@ -14,16 +14,15 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #1e70d7;
-            /* Dynamischer, hellblauer Verlauf mit urbanem Hintergrund-Muster */
+            /* Neues, passendes FiveM-Roleplay Hintergrundbild im transparenten Hellblau-Look */
             background-image: 
-                linear-gradient(135deg, rgba(30, 112, 215, 0.9) 0%, rgba(20, 80, 160, 0.95) 100%),
-                url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920&auto=format&fit=crop');
+                linear-gradient(135deg, rgba(30, 112, 215, 0.88) 0%, rgba(20, 80, 160, 0.94) 100%),
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Der transparente Glaseffekt aus deinem Design */
         .glass-panel {
             background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(12px);
@@ -38,16 +37,24 @@
             border-b: 1px solid rgba(255, 255, 255, 0.15);
         }
 
-        /* Das markante CC-Logo-Styling mit leichtem Glow/Versatz */
         .cc-logo {
             font-weight: 900;
             color: #0026ff;
             text-shadow: 2px 2px 0px rgba(0, 242, 254, 0.6), -1px -1px 0px rgba(255, 255, 255, 0.3);
             letter-spacing: -2px;
         }
+
+        /* Styling für den Lautstärkeregler */
+        input[type="range"] {
+            accent-color: #ffffff;
+        }
     </style>
 </head>
 <body class="text-white antialiased selection:bg-blue-600 selection:text-white">
+
+    <audio id="bg-music" loop>
+        <source src="http://googleusercontent.com/file_content/2" type="audio/mpeg">
+    </audio>
 
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -59,10 +66,22 @@
                 <a href="#home" class="hover:text-blue-200 transition-colors">Übersicht</a>
                 <a href="#concept" class="hover:text-blue-200 transition-colors">Konzept</a>
                 <a href="#fraktionen" class="hover:text-blue-200 transition-colors">Strukturen</a>
-                <a href="https://discord.gg/AsQ3rAJYK9" target="_blank" class="hover:text-blue-200 transition-colors">Direkt Beitretet</a>
+                <a href="https://discord.gg/AsQ3rAJYK9" target="_blank" class="hover:text-blue-200 transition-colors">Direkt Beitreten</a>
             </div>
 
-            <div class="cc-logo text-3xl select-none">CC</div>
+            <div class="flex items-center space-x-4 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                <button onclick="toggleMusic()" id="music-btn" class="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-xs transition-all cursor-pointer" title="Start / Stop">
+                    <i id="music-icon" class="fa-solid fa-play text-white opacity-90"></i>
+                </button>
+                
+                <div class="flex items-center space-x-2 text-xs">
+                    <i class="fa-solid fa-volume-high opacity-60"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.2" class="w-16 md:w-20 h-1 bg-white/20 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <span class="text-white/20">|</span>
+                <div class="cc-logo text-2xl select-none">CC</div>
+            </div>
         </div>
     </nav>
 
@@ -182,5 +201,38 @@
         </div>
     </footer>
 
+    <script>
+        const music = document.getElementById('bg-music');
+        const icon = document.getElementById('music-icon');
+        const volumeSlider = document.getElementById('volume-slider');
+        
+        // Voreingestellte Lautstärke (20% für angenehmen Background-Sound)
+        music.volume = 0.2;
+
+        // Versucht die Musik beim ersten Klick auf die Website automatisch zu starten
+        document.body.addEventListener('click', () => {
+            if (music.paused) {
+                music.play().then(() => {
+                    icon.className = "fa-solid fa-pause text-white opacity-90";
+                }).catch(err => console.log("Autoplay blockiert:", err));
+            }
+        }, { once: true });
+
+        // Start / Stop Funktion
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                icon.className = "fa-solid fa-pause text-white opacity-90";
+            } else {
+                music.pause();
+                icon.className = "fa-solid fa-play text-white opacity-90";
+            }
+        }
+
+        // Event-Listener für den Live-Lautstärkeregler
+        volumeSlider.addEventListener('input', (e) => {
+            music.volume = e.target.value;
+        });
+    </script>
 </body>
 </html>
