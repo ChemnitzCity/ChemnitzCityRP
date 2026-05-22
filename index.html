@@ -64,10 +64,11 @@
     <nav class="custom-nav fixed top-0 left-0 right-0 w-full z-[9999] border-b border-white/5 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-center relative">
             
-            <div class="flex items-center gap-2 sm:gap-4 text-sm sm:text-base font-medium text-gray-400">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base font-medium text-gray-400">
                 <button onclick="showTab('home')" id="nav-home" class="tab-btn text-blue-400 transition-all duration-300 px-5 py-2 rounded-xl bg-white/5 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.15)] cursor-pointer">Home</button>
                 <button onclick="showTab('fraktionen')" id="nav-fraktionen" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Fraktionen</button>
                 <button onclick="showTab('regelwerk')" id="nav-regelwerk" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Regelwerk</button>
+                <button onclick="showTab('team-regelwerk')" id="nav-team-regelwerk" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Team-Regelwerk</button>
                 <button onclick="showTab('tebex')" id="nav-tebex" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Tebex</button>
             </div>
 
@@ -348,6 +349,75 @@
                                 <li><strong class="text-gray-200 font-semibold block mb-0.5">Mündliche Verwarnung:</strong> Bei leichten Fehltritten oder Erstvergehen zur Aufklärung.</li>
                                 <li><strong class="text-gray-200 font-semibold block mb-0.5">Verwarnung (Warn):</strong> Schriftlicher Eintrag. <span class="text-red-400 font-medium">Bei 3 aktiven Warns folgt ein temporärer Bann.</span></li>
                                 <li><strong class="text-gray-200 font-semibold block mb-0.5">Temporärer Ausschluss:</strong> Je nach Schwere des Verstoßes ein Server-Ausschluss von <span class="text-white font-medium">1 bis 14 Tagen</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-content-team-regelwerk" class="tab-content is-hidden">
+            <section class="py-24 px-6 min-h-[80vh]">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl font-black text-center mb-4 tracking-tight drop-shadow-[0_0_20px_rgba(59,130,246,0.2)] text-blue-400">
+                        📑 TEAM-REGELWERK • CHEMNITZ CITY RP
+                    </h2>
+                    <p class="text-center text-gray-400 max-w-3xl mx-auto mb-16 font-light text-sm leading-relaxed border-b border-white/5 pb-8">
+                        Dieses Regelwerk ist für alle Teammitglieder (Supporter, Moderatoren, Administratoren, Entwickler, Projektleitung) von Chemnitz City RP absolut bindend. Mit der Aufnahme in das Team wird dieses Regelwerk automatisch akzeptiert.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-zinc-950/20 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                                <h3 class="text-lg font-bold tracking-tight text-white">1. Allgemeine Verhaltensweisen & Vorbildfunktion</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Vorbildfunktion:</strong> Jedes Teammitglied repräsentiert das Projekt nach außen und innen. Ein freundlicher, respektvoller und professioneller Umgangston ist Pflicht – sowohl gegenüber Spielern als auch im Team.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Neutralität & Unparteilichkeit:</strong> Im Support gibt es keine Freunde oder Feinde. Jeder Spieler wird gleich und fair behandelt. Eigene Fraktionsmitglieder oder Freunde dürfen im Support nicht bevorzugt werden.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Verschwiegenheit (NDA):</strong> Interne Informationen (Teamsitzungen, Ticket-Inhalte, Teambeschwerden, geplante Updates) dürfen unter keinen Umständen an Außenstehende weitergegeben werden. <span class="text-red-400 font-medium">Ein Leak führt zum sofortigen Teamausschluss.</span></li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Konstruktive Kritik:</strong> Kritik im Team wird sachlich und intern geäußert. Öffentliches „Lästern“ oder das Anstacheln von Unruhe auf dem Discord oder im Spiel ist untersagt.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-zinc-950/20 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                                <h3 class="text-lg font-bold tracking-tight text-white">2. In-Game Richtlinien & Admin-Rechte</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Ausnutzung von Rechten (Abuse):</strong> Admin-Rechte (Noclip, Teleport, Godmode, Give-Befehle etc.) dürfen ausschließlich für administrative Zwecke oder zur Fehlerbehebung genutzt werden.</li>
+                                <li class="p-3 bg-red-500/5 rounded-xl border border-red-500/10">
+                                    <strong class="text-red-400 font-semibold block mb-0.5">Strengstens untersagt:</strong> Die Nutzung von Admin-Rechten, um sich selbst oder der eigenen Fraktion einen Vorteil im RP zu verschaffen.
+                                </li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">RP-Teilnahme:</strong> Teammitglieder dürfen am normalen RP-Geschehen teilnehmen. Sobald man sich jedoch im „Admindienst“ befindet (z. B. durch ein Admin-Outfit, Prefix oder Ticket-Bearbeitung), ist man vollständig aus dem RP raus.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Erpressung / Drohung mit Rechten: Sätze wie „Ich banne dich gleich“ oder „Ich bin Supporter, pass lieber auf“ im IC (In-Character) oder OOC (Out-of-Character) sind verboten.</strong></li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Spionage-Verbot:</strong> Das Ausspionieren von anderen Fraktionen mittels Admin-Rechten (z. B. im Noclip Verstecke oder Routen auskundschaften) ist ein <span class="text-red-400 font-medium underline">permanenter Ausschlussgrund</span>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-zinc-950/20 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                                <h3 class="text-lg font-bold tracking-tight text-white">3. Support & Ticket-Bearbeitung</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Beweispflicht:</strong> Sanktionen (Bans, Warns) dürfen nur verhängt werden, wenn eindeutige Beweise (Clips, Logs, Screenshots) vorliegen. „Aussage gegen Aussage“ führt im Zweifel für den Spieler.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Dokumentationspflicht:</strong> Jede administrative Maßnahme (Mute, Kick, Warn, Ban) muss im entsprechenden System (z. B. Ticket-Bot oder In-Game-Panel) mit einem klaren und sachlichen Grund dokumentiert werden.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Eigene Beteiligung:</strong> Wenn ein Teammitglied selbst in eine RP-Situation verwickelt war, darf es das dazugehörige Ticket nicht selbst bearbeiten. Hier muss ein unbeteiligtes Teammitglied hinzugezogen werden.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Ausreden lassen:</strong> Im Support-Gespräch lässt man alle Parteien ausreden. Ausfälle, Beleidigungen oder Schreien im Support führen zu einem sofortigen Ausschluss des Spielers aus dem Support-Channel (ggf. mit Folgesanktionen).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-zinc-950/20 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                                <h3 class="text-lg font-bold tracking-tight text-white">4. Aktivität & Abmeldungen</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Mindestaktivität:</strong> Von jedem Teammitglied wird eine gewisse Präsenz auf dem Server und im Discord/TeamSpeak erwartet.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Abmeldung:</strong> Wer aus privaten, beruflichen oder schulischen Gründen länger als 3 Tage nicht aktiv sein kann, muss sich im dafür vorgesehenen Channel (#team-abmeldung) rechtzeitig abmelden.</li>
+                                <li><strong class="text-gray-200 font-semibold block mb-0.5">Sitzungspflicht:</strong> Die Teilnahme an den offiziellen Teamsitzungen ist Pflicht. Wer unentschuldigt fehlt, muss mit einer Verwarnung rechnen.</li>
                             </ul>
                         </div>
                     </div>
