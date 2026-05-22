@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemnitz City ┃ FiveM</title>
     
-    <link class="rounded-full" rel="icon" href="myLogo.png" type="image/png">
+    <link class="rounded-full" rel="icon" href="image_8.png" type="image/png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,8 +62,13 @@
     <div class="fixed inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black pointer-events-none z-0"></div>
 
     <nav class="custom-nav fixed top-0 left-0 right-0 w-full z-[9999] border-b border-white/5 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-center relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-between relative">
             
+            <div class="flex items-center gap-3">
+                <img src="image_8.png" alt="Logo" class="w-10 h-10 rounded-full border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.3)] object-cover">
+                <span class="font-bold tracking-wider hidden sm:inline text-sm">CCRP</span>
+            </div>
+
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base font-medium text-gray-400">
                 <button onclick="showTab('home')" id="nav-home" class="tab-btn text-blue-400 transition-all duration-300 px-5 py-2 rounded-xl bg-white/5 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.15)] cursor-pointer">Home</button>
                 <button onclick="showTab('fraktionen')" id="nav-fraktionen" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Fraktionen</button>
@@ -72,6 +77,7 @@
                 <button onclick="showTab('tebex')" id="nav-tebex" class="tab-btn hover:text-white transition-all duration-300 px-5 py-2 rounded-xl border border-transparent hover:bg-white/5 hover:border-white/10 cursor-pointer">Tebex</button>
             </div>
 
+            <div class="w-10 h-10 hidden sm:block"></div>
         </div>
     </nav>
 
@@ -115,6 +121,8 @@
         <div id="tab-content-home" class="tab-content">
             <section class="h-[85vh] flex items-center justify-center text-center px-6">
                 <div class="max-w-4xl bg-black/30 p-12 rounded-3xl backdrop-blur-sm border border-white/5">
+                    <img src="image_8.png" alt="Zentrales Logo" class="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.4)] object-cover">
+                    
                     <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 text-white drop-shadow-[0_0_30px_rgba(251,251,251,0.15)]">
                         Chemnitz City <span class="text-blue-500 drop-shadow-[0_0_25px_rgba(59,130,246,0.4)]">┃</span> FiveM
                     </h1>
@@ -391,7 +399,7 @@
                                     <strong class="text-red-300 font-semibold block mb-0.5">Strengstens untersagt:</strong> Die Nutzung von Admin-Rechten, um sich selbst oder der eigenen Fraktion einen Vorteil im RP zu verschaffen.
                                 </li>
                                 <li><strong class="text-gray-100 font-semibold block mb-0.5">RP-Teilnahme:</strong> Teammitglieder dürfen am normalen RP-Geschehen teilnehmen. Sobald man sich jedoch im „Admindienst“ befindet (z. B. durch ein Admin-Outfit, Prefix oder Ticket-Bearbeitung), ist man vollständig aus dem RP raus.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Erpressung / Drohung mit Rechten: Drohung mit Rechten: Sätze wie „Ich banne dich gleich“ oder „Ich bin Supporter, pass lieber auf“ im IC (In-Character) oder OOC (Out-of-Character) sind verboten.</strong></li>
+                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Erpressung / Drohung mit Rechten:</strong> Sätze wie „Ich banne dich gleich“ oder „Ich bin Supporter, pass lieber auf Trim“ im IC (In-Character) oder OOC (Out-of-Character) sind verboten.</li>
                                 <li><strong class="text-gray-100 font-semibold block mb-0.5">Spionage-Verbot:</strong> Das Ausspionieren von anderen Fraktionen mittels Admin-Rechten (z. B. im Noclip Verstecke oder Routen auskundschaften) ist ein <span class="text-red-400 font-medium underline">permanenter Ausschlussgrund</span>.</li>
                             </ul>
                         </div>
@@ -511,6 +519,24 @@
                 closeFactionModal();
             }
         }
+
+        // Live API Abfrage für Discord über einen CORS-Proxy
+        const DISCORD_INVITE_CODE = "HHyd7C7sZe";
+        const targetUrl = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`;
+
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
+            .then(response => response.ok ? response.json() : Promise.reject())
+            .then(data => {
+                const discordData = JSON.parse(data.contents);
+                if (discordData) {
+                    document.getElementById('discord-online').innerText = discordData.approximate_presence_count || "Online";
+                    document.getElementById('discord-total').innerText = discordData.approximate_member_count || "-";
+                }
+            })
+            .catch(() => {
+                document.getElementById('discord-online').innerText = "Online";
+                document.getElementById('discord-total').innerText = "-";
+            });
     </script>
 </body>
 </html>
