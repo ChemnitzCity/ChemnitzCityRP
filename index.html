@@ -57,9 +57,9 @@
     </style>
 </head>
 <body class="min-h-screen bg-black text-white font-sans overflow-x-hidden pt-24 bg-fixed bg-cover bg-center" 
-      style="background-image: url('image_7.png');">
+      style="background-image: url('image_10.png');">
     
-    <div class="fixed inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black pointer-events-none z-0"></div>
+    <div class="fixed inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black pointer-events-none z-0"></div>
 
     <nav class="custom-nav fixed top-0 left-0 right-0 w-full z-[9999] border-b border-white/5 px-6 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between relative">
@@ -86,7 +86,7 @@
             <div class="flex items-center gap-4 relative p-2 rounded-xl group hover:bg-white/5 transition-all duration-300">
                 <div class="absolute left-0 top-0 h-full w-[2px] bg-red-500/60 rounded-full group-hover:w-[3px] group-hover:bg-red-500 transition-all"></div>
                 <div class="w-9 h-9 rounded-lg bg-zinc-900/40 border border-red-500/20 flex items-center justify-center transition-all duration-300 group-hover:border-red-500/50 group-hover:shadow-[0_0_10px_rgba(239,68,68,0.3)] backdrop-blur-md">
-                    <span class="text-red-500 font-bold text-xs tracking-wider">P</span>
+                    <span class="text-amber-300 font-bold text-xs tracking-wider">P</span>
                 </div>
                 <div>
                     <p class="font-semibold text-gray-200 text-xs tracking-wide group-hover:text-white transition-colors">Paul</p>
@@ -120,7 +120,7 @@
 
         <div id="tab-content-home" class="tab-content">
             <section class="h-[85vh] flex items-center justify-center text-center px-6">
-                <div class="max-w-4xl bg-black/30 p-12 rounded-3xl backdrop-blur-sm border border-white/5">
+                <div class="max-w-4xl bg-black/20 p-12 rounded-3xl backdrop-blur-xs border border-white/5">
                     <img src="image_8.png" alt="Zentrales Logo" class="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.4)] object-cover">
                     
                     <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 text-white drop-shadow-[0_0_30px_rgba(251,251,251,0.15)]">
@@ -198,11 +198,10 @@
                 <div class="max-w-7xl mx-auto">
                     <h2 class="text-5xl font-bold text-center mb-4 text-blue-400">Unsere Fraktionen</h2>
                     <p class="text-center text-gray-300 mb-16 max-w-xl mx-auto bg-black/20 p-4 rounded-xl backdrop-blur-sm border border-white/5">
-                        Wähle deinen Lebensweg in Chemnitz City. Klicke auf eine Fraktion, um exklusive Details und Aufgabenbereiche einzusehen.
+                        Wähle deinen Lebensweg in Chemnitz City. Klicke auf eine Fraktion, um exklusive Details einzusehen.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        
                         <div onclick="openFactionModal('Polizei')" class="group relative cursor-pointer bg-zinc-900/60 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:-translate-y-1.5 transition-all duration-300">
                             <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                             <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">Polizei</h3>
@@ -226,31 +225,6 @@
                             <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-orange-400 transition-colors">Straßengangs</h3>
                             <p class="text-xs text-zinc-400 mt-2 group-hover:text-zinc-300 transition-colors">Viertel-Kultur & Kriminalität</p>
                         </div>
-
-                        <div onclick="openFactionModal('Tuningwerkstatt')" class="group relative cursor-pointer bg-zinc-900/60 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors">Tuningwerkstatt</h3>
-                            <p class="text-xs text-zinc-400 mt-2 group-hover:text-zinc-300 transition-colors">Fahrzeugmodifikationen</p>
-                        </div>
-
-                        <div onclick="openFactionModal('Mafia')" class="group relative cursor-pointer bg-zinc-900/60 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-purple-500/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">Mafia</h3>
-                            <p class="text-xs text-zinc-400 mt-2 group-hover:text-zinc-300 transition-colors">Organisiertes Verbrechen</p>
-                        </div>
-
-                        <div onclick="openFactionModal('Taxiunternehmen')" class="group relative cursor-pointer bg-zinc-900/60 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-cyan-500/60 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">Taxiunternehmen</h3>
-                            <p class="text-xs text-zinc-400 mt-2 group-hover:text-zinc-300 transition-colors">Personenbeförderung</p>
-                        </div>
-
-                        <div onclick="openFactionModal('Bürgerschaft')" class="group relative cursor-pointer bg-zinc-900/60 backdrop-blur-xl rounded-2xl p-8 text-center border border-zinc-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:border-slate-400/60 hover:shadow-[0_0_30px_rgba(148,163,184,0.2)] hover:-translate-y-1.5 transition-all duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-slate-300 transition-colors">Bürgerschaft</h3>
-                            <p class="text-xs text-zinc-400 mt-2 group-hover:text-zinc-300 transition-colors">Zivilleben & Freie Wirtschaft</p>
-                        </div>
-
                     </div>
                 </div>
             </section>
@@ -275,88 +249,28 @@
                         Chemnitz City Roleplay – Regelwerk
                     </h2>
                     <p class="text-center text-gray-300 max-w-3xl mx-auto mb-16 font-light text-sm leading-relaxed border-b border-white/5 pb-8 bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
-                        Herzlich willkommen in Chemnitz City! Um ein hochwertiges und faires Spielerlebnis zu garantieren, ist dieses Regelwerk für alle Bürger der Stadt bindend. <span class="text-red-400 font-medium underline underline-offset-2">Unwissenheit schützt vor Strafe nicht.</span>
+                        Herzlich willkommen in Chemnitz City! Um ein hochwertiges und faires Spielerlebnis zu garantieren, ist dieses Regelwerk für alle Bürger bindend. <span class="text-red-400 font-medium underline">Unwissenheit schützt vor Strafe nicht.</span>
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl">
                             <div class="flex items-center gap-3 mb-5">
                                 <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
                                 <h3 class="text-lg font-bold tracking-tight text-white">Allgemeine Verhaltensregeln</h3>
                             </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Respekt & Etikette:</strong> Ein respektvoller Umgangston ist Grundvoraussetzung. OOC-Beleidigungen sind streng untersagt.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Hassrede & Diskriminierung:</strong> Rassismus, Sexismus oder Homophobie führen zum <span class="text-red-400 font-medium">sofortigen Permabann</span>.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Toxizität:</strong> Böswilliges Stören der Spielfreude anderer wird sanktioniert.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Support-Check:</strong> Diskussionen laufender Regeln im Ingame-RP (RP-Flucht in den Support) sind verboten.</li>
+                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light">
+                                <li><strong class="text-gray-100 font-semibold block">Respekt & Etikette:</strong> Respektvoller Umgangston ist Grundvoraussetzung.</li>
+                                <li><strong class="text-gray-100 font-semibold block">Hassrede:</strong> Rassismus oder Homophobie führen zum <span class="text-red-400">sofortigen Permabann</span>.</li>
                             </ul>
                         </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
+                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl">
                             <div class="flex items-center gap-3 mb-5">
                                 <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
                                 <h3 class="text-lg font-bold tracking-tight text-white">Roleplay-Grundlagen</h3>
                             </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Fail-RP:</strong> Handlungen müssen realistisch bleiben. Das Verlassen der Rolle (OOC) im Spiel ist verboten.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Metagaming:</strong> Externe Infos (Discord, Streams) dürfen das Ingame-Handeln nicht beeinflussen.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Powergaming:</strong> Unfaire Handlungen, die dem Gegenüber keine logische Reaktionsmöglichkeit bieten, sind untersagt.</li>
-                                <li class="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20">
-                                    <strong class="text-blue-300 font-semibold block mb-0.5">New Life Regel:</strong> Nach dem Medic-Respawn vergisst du die letzte Situation. Du darfst für <span class="text-blue-300 font-medium underline">15 Minuten</span> nicht an den Ort des Geschehens zurückkehren.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">Gewalt & Kriminalität</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">RDM & VDM:</strong> Töten oder Überfahren ohne ersichtlichen, triftigen RP-Hintergrund ist verboten.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Schuss-Call:</strong> Benötigt klaren Grund und mündliche Androhung. <span class="text-blue-300 block font-medium mt-1">Hinweis: Nach der letzten Interaktion für 10 Minuten aktiv.</span></li>
-                                <li>
-                                    <strong class="text-gray-100 font-semibold block mb-1">Geiselnahmen:</strong>
-                                    <span class="block text-gray-300 font-light">• Müssen hochwertig ausgespielt werden.</span>
-                                    <span class="block text-gray-300 font-light">• Max. Forderung pro Geisel: <span class="text-emerald-400 font-semibold">20.000€</span></span>
-                                    <span class="block text-gray-300 font-light">• Max. Gesamtforderung: <span class="text-emerald-400 font-semibold">60.000€</span> (ab 3 Geiseln gedeckelt).</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">Fraktionen & Wirtschaft</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Fraktionskriege:</strong> Bewaffnete Konflikte zwischen Gruppierungen benötigen zwingend eine solide RP-Basis.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Korruption:</strong> In staatlichen Organisationen (LSPD, LSMD) nur nach expliziter Genehmigung durch die Projektleitung erlaubt.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Fahrzeug-Missbrauch:</strong> Autos besitzen realistische Schadensmodelle. Mutwilliges Rammen oder Blockieren von Spawns ist verboten.</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">Technik & Sicherheit</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Cheating & Hacks:</strong> Fremdsoftware oder Mod-Menüs resultieren in einem <span class="text-red-400 font-medium underline">permanenten Ausschluss</span>.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Exploiting:</strong> Das Ausnutzen von Fehlern/Bugs (z.B. Duplizierung) ist verboten. Meldepflicht im Support!</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Voice-Chat:</strong> Gutes, rauschfreies Mikrofon ist Pflicht. Störgeräusche oder grundlose Stimmenverzerrer sind verboten.</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-red-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-red-400">Sanktionskatalog</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Mündliche Verwarnung:</strong> Bei leichten Fehltritten oder Erstvergehen zur Aufklärung.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Verwarnung (Warn):</strong> Schriftlicher Eintrag. <span class="text-red-400 font-medium">Bei 3 aktiven Warns folgt ein temporärer Bann.</span></li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Temporärer Ausschluss:</strong> Je nach Schwere des Verstoßes ein Server-Ausschluss von <span class="text-white font-medium">1 bis 14 Tagen</span>.</li>
+                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light">
+                                <li><strong class="text-gray-100 font-semibold block">Fail-RP:</strong> Handlungen müssen komplett realistisch bleiben.</li>
+                                <li><strong class="text-gray-100 font-semibold block">Metagaming:</strong> Externe Infos dürfen IC nicht verwendet werden.</li>
                             </ul>
                         </div>
                     </div>
@@ -371,62 +285,17 @@
                         📑 TEAM-REGELWERK • CHEMNITZ CITY RP
                     </h2>
                     <p class="text-center text-gray-300 max-w-3xl mx-auto mb-16 font-light text-sm leading-relaxed border-b border-white/5 pb-8 bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
-                        Dieses Regelwerk ist für alle Teammitglieder (Supporter, Moderatoren, Administratoren, Entwickler, Projektleitung) von Chemnitz City RP absolut bindend. Mit der Aufnahme in das Team wird dieses Regelwerk automatisch akzeptiert.
+                        Richtlinien für administrative Teammitglieder zur Gewährleistung eines fairen Supports.
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">1. Allgemeine Verhaltensweisen & Vorbildfunktion</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Vorbildfunktion:</strong> Jedes Teammitglied repräsentiert das Projekt nach außen und innen. Ein freundlicher, respektvoller und professioneller Umgangston ist Pflicht – sowohl gegenüber Spielern als auch im Team.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Neutralität & Unparteilichkeit:</strong> Im Support gibt es keine Freunde oder Feinde. Jeder Spieler wird gleich und fair behandelt. Eigene Fraktionsmitglieder oder Freunde dürfen im Support nicht bevorzugt werden.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Verschwiegenheit (NDA):</strong> Interne Informationen (Teamsitzungen, Ticket-Inhalte, Teambeschwerden, geplante Updates) dürfen unter keinen Umständen an Außenstehende weitergegeben werden. <span class="text-red-400 font-medium">Ein Leak führt zum sofortigen Teamausschluss.</span></li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Konstruktive Kritik:</strong> Kritik im Team wird sachlich und intern geäußert. Öffentliches „Lästern“ oder das Anstacheln von Unruhe auf dem Discord oder im Spiel ist untersagt.</li>
-                            </ul>
+                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">1. Vorbildfunktion & Neutralität</h3>
+                            <p class="text-gray-300 text-xs md:text-sm font-light">Jedes Teammitglied muss unparteiisch agieren. Eigene Fraktionen dürfen im Support unter keinen Umständen bevorzugt behandelt werden.</p>
                         </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">2. In-Game Richtlinien & Admin-Rechte</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Ausnutzung von Rechten (Abuse):</strong> Admin-Rechte (Noclip, Teleport, Godmode, Give-Befehle etc.) dürfen ausschließlich für administrative Zwecke oder zur Fehlerbehebung genutzt werden.</li>
-                                <li class="p-3 bg-red-500/10 rounded-xl border border-red-500/20">
-                                    <strong class="text-red-300 font-semibold block mb-0.5">Strengstens untersagt:</strong> Die Nutzung von Admin-Rechten, um sich selbst oder der eigenen Fraktion einen Vorteil im RP zu verschaffen.
-                                </li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">RP-Teilnahme:</strong> Teammitglieder dürfen am normalen RP-Geschehen teilnehmen. Sobald man sich jedoch im „Admindienst“ befindet (z. B. durch ein Admin-Outfit, Prefix oder Ticket-Bearbeitung), ist man vollständig aus dem RP raus.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Erpressung / Drohung mit Rechten:</strong> Sätze wie „Ich banne dich gleich“ oder „Ich bin Supporter, pass lieber auf Trim“ im IC (In-Character) oder OOC (Out-of-Character) sind verboten.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Spionage-Verbot:</strong> Das Ausspionieren von anderen Fraktionen mittels Admin-Rechten (z. B. im Noclip Verstecke oder Routen auskundschaften) ist ein <span class="text-red-400 font-medium underline">permanenter Ausschlussgrund</span>.</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">3. Support & Ticket-Bearbeitung</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Beweispflicht:</strong> Sanktionen (Bans, Warns) dürfen nur verhängt werden, wenn eindeutige Beweise (Clips, Logs, Screenshots) vorliegen. „Aussage gegen Aussage“ führt im Zweifel für den Spieler.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Dokumentationspflicht:</strong> Jede administrative Maßnahme (Mute, Kick, Warn, Ban) muss im entsprechenden System (z. B. Ticket-Bot oder In-Game-Panel) mit einem klaren und sachlichen Grund dokumentiert werden.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Eigene Beteiligung:</strong> Wenn ein Teammitglied selbst in eine RP-Situation verwickelt war, darf es das dazugehörige Ticket nicht selbst bearbeiten. Hier muss ein unbeteiligtes Teammitglied hinzugezogen werden.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Ausreden lassen:</strong> Im Support-Gespräch lässt man alle Parteien ausreden. Ausfälle, Beleidigungen oder Schreien im Support führen zu einem sofortigen Ausschluss des Spielers aus dem Support-Channel (ggf. mit Folgesanktionen).</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:border-blue-500/20">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-1.5 h-5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-                                <h3 class="text-lg font-bold tracking-tight text-white">4. Aktivität & Abmeldungen</h3>
-                            </div>
-                            <ul class="space-y-4 text-gray-300 text-xs md:text-sm font-light leading-relaxed">
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Mindestaktivität:</strong> Von jedem Teammitglied wird eine gewisse Präsenz auf dem Server und im Discord/TeamSpeak erwartet.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Abmeldung:</strong> Wer aus privaten, beruflichen oder schulischen Gründen länger als 3 Tage nicht aktiv sein kann, muss sich im dafür vorgesehenen Channel (#team-abmeldung) rechtzeitig abmelden.</li>
-                                <li><strong class="text-gray-100 font-semibold block mb-0.5">Sitzungspflicht:</strong> Die Teilnahme an den offiziellen Teamsitzungen ist Pflicht. Wer unentschuldigt fehlt, muss mit einer Verwarnung rechnen.</li>
-                            </ul>
+                        <div class="bg-zinc-950/40 border border-white/5 backdrop-blur-2xl p-8 rounded-2xl shadow-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">2. Rechtenutzung (Anti-Abuse)</h3>
+                            <p class="text-gray-300 text-xs md:text-sm font-light">Noclip, Teleportation oder Item-Gives dürfen ausschließlich für administrative Tätigkeiten verwendet werden, niemals im aktiven RP.</p>
                         </div>
                     </div>
                 </div>
@@ -438,9 +307,9 @@
                 <div class="max-w-3xl mx-auto text-center bg-zinc-950/40 border border-white/5 backdrop-blur-2xl rounded-3xl p-12 shadow-2xl">
                     <h2 class="text-4xl font-black mb-4 tracking-tight text-white">Chemnitz City Store</h2>
                     <p class="text-gray-300 font-light text-base max-w-xl mx-auto mb-10 leading-relaxed">
-                        Unterstütze die Server- und Entwicklungskosten unseres Projekts! Als Dankeschön kannst du rein optische Erweiterungen, individuelle Fahrzeug-Skins oder spezielle Discord-Ränge freischalten. Alle Angebote sind absolut fair gestaltet, bieten keinerlei spielerische Vorteile im Roleplay und schützen die Chancengleichheit aller Bürger (Kein Pay-to-Win).
+                        Unterstütze das Projekt! Alle kosmetischen Erweiterungen bieten keinerlei spielerische Vorteile im Roleplay und schützen die Chancengleichheit (Kein Pay-to-Win).
                     </p>
-                    <a href="https://tebex.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-10 py-4 rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:scale-[1.03] transition-all duration-300">
+                    <a href="https://tebex.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-10 py-4 rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:scale-[1.03] transition-all duration-300">
                         Webshop öffnen
                     </a>
                 </div>
@@ -471,7 +340,7 @@
                 activeBtn.className = "tab-btn text-blue-400 transition-all duration-300 px-5 py-2 rounded-xl bg-white/10 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.15)] cursor-pointer";
             }
 
-            // Teambox Sichtbarkeit steuern
+            // Teambox Steuerung
             const teamBox = document.getElementById('team-box');
             if (tabName === 'home') {
                 teamBox.style.display = 'block';
